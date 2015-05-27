@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="Usuario" version="1.0">
+    <settings>
+      <title><![CDATA[Usuários do Manager]]></title>
+      <description><![CDATA[Gerenciamento dos usuários que tem acesso a ferramenta de gerenciamento do portal.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeleteUsuario" />
+    </settings>
+
+    <events>
+      <add name="BeforeRegisterDelete" />
+    </events>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="aspnet_Users" primaryKey="UserId" />
+
+    <queries>
+      <query section="list" sql="
+             
+          SELECT 
+          U.UserId as UserId, 
+          UserName, 
+          LastActivityDate, 
+          MS.Email, 
+          CASE WHEN MS.IsApproved = 1 THEN 'Sim' ELSE 'Não'END AS Ativo
+          , MS.IsApproved
+          FROM aspnet_Users U
+          INNER JOIN aspnet_Membership MS ON MS.UserId = U.UserId
+             
+      " />
+
+      <query section="listOracle" sql="
+             
+          SELECT 
+          U.PKID as UserId, 
+          UserName, 
+          LastActivityDate, 
+          Email, 
+          CASE WHEN IsApproved = 1 THEN 'Sim' 
+          ELSE 'Não'
+          END AS Ativo
+          FROM Users U
+      " />
+
+    </queries>
+
+    <forms>
+      <edit type="control" src="Usuario.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="nome" label="Nome" sort="true" dataFieldName="UserName" showInList="true" maxlength="80" />
+      <TextBox name="email" label="E-mail" sort="true" dataFieldName="Email" showInList="false" maxlength="80" />
+    </fields>
+
+    <filters>
+      <filter label="Nome" field="nome" />
+      <filter label="E-mail" field="email" />
+    </filters>
+
+  </module>
+
+
+</AG2Manager>

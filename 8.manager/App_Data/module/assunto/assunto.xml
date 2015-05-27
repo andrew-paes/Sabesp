@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="assunto" version="1.0">
+		<!--Habilita o multi idioma para o módulo-->
+		<settings>
+			<title><![CDATA[Cadastro Assunto]]></title>
+			<description><![CDATA[Descrição Assunto]]></description>
+			<setting name="multiLanguage"  value="false" />
+			<setting name="controlVersion"  value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="20" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="FaleConoscoAssunto" primaryKey="faleConoscoAssuntoId" />
+
+		<queries>
+
+			<!--Exemplo com multi linguagem-->
+			<query section="list" type="StoredProcedure" sql="FaleConoscoAssuntoCarregar" >
+			</query>
+
+			<query section="edit" type="StoredProcedure" sql="FaleConoscoAssuntoCarregar" >
+			</query>
+
+
+		</queries>
+
+		<!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+		<fields>
+
+			<TextBox
+			name="assunto"
+			label="Assunto"
+			required="true"
+			sort="true"
+			dataFieldName="assunto"
+			width="300"
+			showInList="true"
+			maxlength="100"
+			translation="false"
+			/>
+
+			<TextBox
+			name="email"
+			label="E-mail"
+			required="true"
+			sort="true"
+			dataFieldName="email"
+			width="300"
+			showInList="true"
+			maxlength="100"
+			translation="false"
+			/>
+
+			<CheckBox 
+			name="ativo" 
+			label="Ativo" 
+			dataFieldName="ativo" 
+			dbType="StringFixedLength" 
+			Checked="true" 
+			translation="false" 
+			/>
+
+		</fields>
+
+		<!--FILTROS-->
+		<filters>
+			<filter label="Assunto" field="assunto" />
+		</filters>
+
+	</module>
+</AG2Manager>

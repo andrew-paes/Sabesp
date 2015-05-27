@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="regiao" version="1.0">
+		<settings>
+			<title><![CDATA[Região]]></title>
+			<description><![CDATA[Gerenciamento das Regiões.]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="clearFormAfterInsert" value="true" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteRegiao" />
+		</settings>
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<!-- Configuracao da tabela q ue recebe os dados -->
+		<table name="Regiao" primaryKey="regiaoId" />
+
+		<forms>
+			<edit type="control" src="regiao.ascx" />
+		</forms>
+
+		<queries>
+			<query section="list" sql="REGIAOCarregar" />
+		</queries>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+
+			<TextBox name="nomeRegiao" label="Região" width="450" sort="true" dataFieldName="nomeRegiao" required="true" showInList="true" maxlength="50" />
+
+		</fields>
+
+		<filters>
+			<filter label="Região" field="nomeRegiao" />
+		</filters>
+
+	</module>
+</AG2Manager>

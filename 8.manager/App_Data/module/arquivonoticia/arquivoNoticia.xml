@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="arquivonoticia" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Cadastro de Arquivo Notícia]]></title>
+      <description><![CDATA[Descrição de Arquivos Notícias]]></description>
+
+      <!--
+      Adiciona a funcionalidade de multi linguagem ao módulo
+      Obs: Não esquecer de habilitar esta funcionalidade no web.config pois é ela quem habilita o funcionamento geral de multi linguagem no manager
+      Adcionar a seguinte linha no <appSettings>: 
+      <add key="enableMultiLanguage" value="true"/>
+
+      -->
+      <setting name="multiLanguage"  value="false" />
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="arquivo" primaryKey="arquivoId" />
+
+    <forms>
+      <edit type="control" src="arquivonoticia.ascx" />
+    </forms>
+    
+    <!--Caso queira usar na query SQL o id do usuário logado ou perfil do mesmo, insera as respectivas expressões onde você desejar imprimir o seu valor:
+    {USER_ID}
+    {PERFIL_ID}
+    {IDIOMA_ID}
+    
+    Obs: As expressões acima estão listadas na classe SqlClause (Name Space Ag2.Manager.Dicionary) sinta-se a vontade em adicionar novas expressões na lista.
+    -->
+    <queries>
+
+      <!--
+      type - Nova propriedade da tag query, serve para informar se você irá usar um string command ou uma Stored Procedure command.
+      Obs: Caso não seja informada esta propriedade o sistema usa como padrão a (SqlStringCommand).
+      As opções aceitas são:
+      -StoredProcedure
+      -Sql
+      
+      Existe a possibilidade de passar parametros para a Procedure.
+      Ex:
+      
+      <query section="list" type="StoredProcedure" sql="PC_Select">
+        <addParameter name="@nome" type="string" value="Fulano" />
+        <addParameter name="@casado" type="bool" value="1" />
+      </query>
+      
+      -->
+
+      <!--Exemplo com multi linguagem-->
+      <query section="list" type="StoredProcedure" sql="ArquivoCarregar" >
+      </query>
+
+      <query section="edit" type="StoredProcedure" sql="ArquivoCarregar" >
+      </query>
+
+
+      <!--<query section="list" type="Sql" sql="
+            SELECT N.*, NI.titulo ,C.descricao FROM noticia N
+            INNER JOIN dbo.noticia_Idioma NI ON NI.noticiaId = N.noticiaId
+            INNER JOIN categoria C ON C.categoriaId = N.categoriaId 
+            WHERE idiomaId = {IDIOMA_ID}" >
+      </query>-->
+
+      <!--Exemplo sem multi linguagem-->
+      <!--<query section="list" sql="
+            SELECT N.*, C.descricao FROM noticia N
+            INNER JOIN categoria C ON C.categoriaId = N.categoriaId 
+      " />-->
+
+      <!--<query section="export" sql="SELECT noticiaId as 'Código da Notícia', titulo as 'Título da Notícia' FROM noticia" />-->
+    </queries>
+
+    <!--INFORME AQUI O USERCONTROL (.ASCX) QUE VOCÊ DESEJA QUE A PÁGINA DE EDIÇÃO CARREGUE-->
+    <!--<forms>
+      <edit type="control" src="noticia.ascx" />
+    </forms>-->
+
+    <!--OPÇÕES PARA NOVAS FUNCIONALIDADES-->
+    <!--<options>
+      <option querySection="export" value="excel" name="Exportar (Excel)" />
+      <option querySection="export" value="csv" name="Exportar (CSV)" />
+    </options>-->
+    
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields>
+
+      
+      <!--
+      TEXTBOX
+      Adicionar o atrubuto (inputMask) caso queira aplicar uma mascara ao textbox
+      Tipo aceitos:
+      cpf
+      cnpj
+      rg
+      cep
+      data
+      hora
+      ddd
+      telefone
+      moeda
+      numero
+      -->
+
+      <UploadFile
+        name="nomeArquivo"
+        dataFieldName="nomeArquivo"
+        translation="false"
+        label="Arquivo"
+        runat="server"
+        allowedExtensions="*.*"
+        targetFolder="noticia/galeria/"
+        showInList="true"
+        maxFileLength="1024" />
+      
+      <TextBox
+        name="tamanho"
+        label="Tamanho"
+        required="true"
+        sort="true"
+        dataFieldName="tamanho"
+        width="50"
+        showInList="false"
+        maxlength="10"
+        translation="false"
+      />
+
+
+      <TextBox
+        name="extensao"
+        label="Extensão"
+        required="true"
+        sort="true"
+        dataFieldName="extensao"
+        width="50"
+        showInList="true"
+        maxlength="10"
+        translation="false"
+      />
+      
+    </fields>
+
+    <!--FILTROS-->
+    <filters>
+      <filter label="Título" field="nomeArquivo" />
+
+      <!--
+      DATE
+      Para fazer filtro por período insira a propriedade (filterType="range")
+      Ex: <filter label="Data" filterType="range" field="data" />
+      -->
+
+    </filters>
+
+    <!--EXEMPLO DE COMO INSERIR CONSTRAINTS-->
+    <!--<constraints>
+      <constraint name="posta_codigoAgencia" type="unique">
+        <field name="tipoAgencia" dataFieldName="A.tipoAgenciaId" />
+        <field name="codigoAgencia" dataFieldName="Ponto.codigoAgencia" />
+      </constraint>
+    </constraints>-->
+
+  </module>
+
+</AG2Manager>

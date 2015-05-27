@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="comunicado" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Cadastro Comunicado]]></title>
+      <description><![CDATA[Descrição Comunicado]]></description>
+
+      <!--
+      Adiciona a funcionalidade de multi linguagem ao módulo
+      Obs: Não esquecer de habilitar esta funcionalidade no web.config pois é ela quem habilita o funcionamento geral de multi linguagem no manager
+      Adcionar a seguinte linha no <appSettings>: 
+      <add key="enableMultiLanguage" value="true"/>
+
+      -->
+      <setting name="multiLanguage"  value="true" />
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+      <setting name="workflow" value="true" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="comunicado" primaryKey="comunicadoId" />
+
+    <forms>
+      <edit type="control" src="comunicado.ascx" />
+    </forms>
+
+    <queries>
+
+      <!--Exemplo com multi linguagem-->
+      <query section="list" type="StoredProcedure" sql="ComunicadoCarregar" >
+      </query>
+
+      <!--<query section="edit" type="StoredProcedure" sql="ComunicadoAtualizar" >
+      </query>-->
+
+    </queries>
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields>
+
+      <TextBox
+        name="tituloComunicado"
+        label="Título"
+        required="true"
+        sort="true"
+        dataFieldName="tituloComunicado"
+        width="300"
+        showInList="true"
+        maxlength="50"
+        translation="true"
+      />
+
+    </fields>
+
+    <!--FILTROS-->
+    <filters>
+      <filter label="Título" field="tituloComunicado" />
+    </filters>
+
+  </module>
+
+</AG2Manager>

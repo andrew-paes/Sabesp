@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sabesp.Data</RootNamespace>
+    <AssemblyName>Sabesp.Data</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\site\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ArquivoService.cs" />
+    <Compile Include="Services\ComunicadoIdiomaService.cs" />
+    <Compile Include="Services\ComunicadoService.cs" />
+    <Compile Include="Services\ConteudoAvaliacaoService.cs" />
+    <Compile Include="Services\ConteudoHitsService.cs" />
+    <Compile Include="Services\ConteudoService.cs" />
+    <Compile Include="Services\ConteudoTagService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ControleIdiomaDadoService.cs" />
+    <Compile Include="Services\ControleIdiomaService.cs" />
+    <Compile Include="Services\ControleService.cs" />
+    <Compile Include="Services\ControleSessaoService.cs" />
+    <Compile Include="Services\ControleTipoService.cs" />
+    <Compile Include="Services\BuscaConteudoService.cs" />
+    <Compile Include="Services\ContatoService.cs" />
+    <Compile Include="Services\FomularioVideoteca1Service.cs" />
+    <Compile Include="Services\FormularioCicloConferenciaService.cs" />
+    <Compile Include="Services\PodcastCategoriaIdiomaService.cs" />
+    <Compile Include="Services\PodcastCategoriaService.cs" />
+    <Compile Include="Services\TipoImovelService.cs" />
+    <Compile Include="Services\HorarioPreferenciaService.cs" />
+    <Compile Include="Services\LocalCursoService.cs" />
+    <Compile Include="Services\IndicacaoService.cs" />
+    <Compile Include="Services\EscolaridadeService.cs" />
+    <Compile Include="Services\FomularioCursoVazamentoService.cs" />
+    <Compile Include="Services\FomularioApoioInstitucionalService.cs" />
+    <Compile Include="Services\FomularioVideotecaService.cs" />
+    <Compile Include="Services\FomularioSegurancaTrabalhoService.cs" />
+    <Compile Include="Services\FomularioInvestidorQualificacaoService.cs" />
+    <Compile Include="Services\FomularioInvestidorService.cs" />
+    <Compile Include="Services\EstadoService.cs" />
+    <Compile Include="Services\FomularioImprensaService.cs" />
+    <Compile Include="Services\FomularioService.cs" />
+    <Compile Include="Services\FaleConoscoService.cs" />
+    <Compile Include="Services\IdiomaService.cs" />
+    <Compile Include="Services\InfograficoIdiomaService.cs" />
+    <Compile Include="Services\InfograficoService.cs" />
+    <Compile Include="Services\MunicipioAbaService.cs" />
+    <Compile Include="Services\EventoFotoComentarioService.cs" />
+    <Compile Include="Services\GlossarioIdiomaService.cs" />
+    <Compile Include="Services\GlossarioService.cs" />
+    <Compile Include="Services\MaterialImprensaIdiomaService.cs" />
+    <Compile Include="Services\MaterialImprensaService.cs" />
+    <Compile Include="Services\NoticiaImagemComentarioService.cs" />
+    <Compile Include="Services\ProdutoIdiomaService.cs" />
+    <Compile Include="Services\ProdutoImagemService.cs" />
+    <Compile Include="Services\ProdutoService.cs" />
+    <Compile Include="Services\ProdutoTipoIdiomaService.cs" />
+    <Compile Include="Services\ProdutoTipoService.cs" />
+    <Compile Include="Services\ProjetoEspecialIdiomaService.cs" />
+    <Compile Include="Services\ProjetoEspecialService.cs" />
+    <Compile Include="Services\RegiaoIdiomaService.cs" />
+    <Compile Include="Services\ReleaseImagemComentarioService.cs" />
+    <Compile Include="Services\ReleaseIdiomaService.cs" />
+    <Compile Include="Services\ReleaseImagemService.cs" />
+    <Compile Include="Services\ReleaseService.cs" />
+    <Compile Include="Services\RegiaoService.cs" />
+    <Compile Include="Services\MunicipioService.cs" />
+    <Compile Include="Services\EventoFotoService.cs" />
+    <Compile Include="Services\ModeloService.cs" />
+    <Compile Include="Services\SecaoIdiomaService.cs" />
+    <Compile Include="Services\EventoCategoriaIdiomaService.cs" />
+    <Compile Include="Services\EventoCategoriaService.cs" />
+    <Compile Include="Services\FaqCategoriaIdiomaService.cs" />
+    <Compile Include="Services\FaqCategoriaService.cs" />
+    <Compile Include="Services\FaqIdiomaService.cs" />
+    <Compile Include="Services\FaqService.cs" />
+    <Compile Include="Services\EventoIdiomaService.cs" />
+    <Compile Include="Services\EventoService.cs" />
+    <Compile Include="Services\NoticiaImagemService.cs" />
+    <Compile Include="Services\PodcastIdiomaService.cs" />
+    <Compile Include="Services\PodcastService.cs" />
+    <Compile Include="Services\SecaoService.cs" />
+    <Compile Include="Services\solucaoAmbientalService.cs" />
+    <Compile Include="Services\TagService.cs" />
+    <Compile Include="Services\VideoIdiomaService.cs" />
+    <Compile Include="Services\VideoService.cs" />
+    <Compile Include="Services\NoticiaIdiomaService.cs" />
+    <Compile Include="Services\NoticiaService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2.Sabesp.ADO\Sabesp.ADO.csproj">
+      <Project>{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}</Project>
+      <Name>Sabesp.ADO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3.Sabesp.BO\Sabesp.BO.csproj">
+      <Project>{C4FC704E-2AFA-459B-8B08-44EF8E23F744}</Project>
+      <Name>Sabesp.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\5.Sabesp.DAL\Sabesp.DAL.csproj">
+      <Project>{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}</Project>
+      <Name>Sabesp.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\6.Sabesp.FilterHelper\Sabesp.FilterHelper.csproj">
+      <Project>{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}</Project>
+      <Name>Sabesp.FilterHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

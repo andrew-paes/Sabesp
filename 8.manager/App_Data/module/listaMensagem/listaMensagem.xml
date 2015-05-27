@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="assunto" version="1.0">
+		<!--Habilita o multi idioma para o módulo-->
+		<settings>
+			<title><![CDATA[Lista Mensagens]]></title>
+			<description><![CDATA[Descrição Lista Mensagens]]></description>
+			<setting name="multiLanguage"  value="false" />
+			<setting name="controlVersion"  value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="20" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="FaleConoscoMensagem" primaryKey="faleConoscoMensagemId" />
+
+		<queries>
+
+			<!--Exemplo com multi linguagem-->
+			<query section="list" type="StoredProcedure" sql="FaleConoscoMensagemCarregar" >
+			</query>
+
+		</queries>
+
+		<!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+		<fields>
+
+			<Date
+				name="dataEnvio"
+				label="Enviada em:"
+				required="true"
+				sort="true"
+				dataFieldName="dataEnvio"
+				translation="false"
+			/>
+
+			<ListBox
+				name="faleConoscoAssuntoId"
+				label="Assunto"
+				dataFieldName="faleConoscoAssuntoId"
+				showInList="true"
+				inListUseField="FaleConoscoAssunto_assunto"
+				required="false"
+				dataSource="PROC:FaleConoscoAssuntoCarregar"
+				dataTextField="assunto"
+				dataValueField="faleConoscoAssuntoId"
+			/>
+
+			<TextBox
+				name="nome"
+				label="Nome"
+				required="true"
+				sort="true"
+				dataFieldName="nome"
+				width="300"
+				showInList="true"
+				maxlength="100"
+				translation="false"
+			/>
+
+			<TextBox
+				name="email"
+				label="E-mail"
+				required="true"
+				sort="true"
+				dataFieldName="email"
+				width="300"
+				showInList="true"
+				maxlength="100"
+				translation="false"
+			/>
+
+			<ListBox
+				name="regiaoId"
+				label="Região"
+				dataFieldName="regiaoId"
+				showInList="false"
+				inListUseField="Regiao_nomeRegiao"
+				required="false"
+				dataSource="PROC:RegiaoCarregar"
+				dataTextField="nomeRegiao"
+				dataValueField="regiaoId"
+			/>
+
+			<ListBox
+				name="estadoId"
+				label="Estado"
+				dataFieldName="estadoId"
+				showInList="false"
+				inListUseField="Estado_nomeEstado"
+				required="false"
+				dataSource="PROC:EstadoCarregar"
+				dataTextField="nomeEstado"
+				dataValueField="estadoId"
+			/>
+
+			<ListBox
+				name="cidadeId"
+				label="Cidade"
+				dataFieldName="cidadeId"
+				showInList="false"
+				inListUseField="Cidade_nomeCidade"
+				required="false"
+				dataSource="PROC:CidadeCarregar"
+				dataTextField="nomeCidade"
+				dataValueField="cidadeId"
+			/>
+
+			<TextBox
+				name="telefoneDDD"
+				label="DDD"
+				required="true"
+				sort="true"
+				dataFieldName="telefoneDDD"
+				width="30"
+				showInList="false"
+				maxlength="100"
+				translation="false"
+			/>
+
+			<TextBox
+				name="telefoneComplemento"
+				label="Telefone"
+				required="true"
+				sort="true"
+				dataFieldName="telefoneComplemento"
+				width="100"
+				showInList="false"
+				maxlength="100"
+				translation="false"
+			/>
+
+			<HtmlTextBox
+				label="Mensagem"
+				name="mensagem"
+				dataFieldName="mensagem"
+				inListUseField="mensagem"
+				showInList="false"
+				required="false"
+				translation="false"
+			/>
+
+			<CheckBox name="atendido" label="Atendido" dataFieldName="atendido" dbType="StringFixedLength" />
+		</fields>
+
+		<!--FILTROS-->
+		<filters>
+			<filter label="Nome" field="nome" />
+			<filter label="Região" field="regiaoId" filterExpression="Regiao.regiaoId="  />
+			<filter label="Estado" field="estadoId" filterExpression="Estado.estadoId=" />
+			<filter label="Cidade" field="cidadeId" filterExpression="Cidade.cidadeId=" />
+			<filter label="Atendido" field="atendido" />
+		</filters>
+
+	</module>
+</AG2Manager>

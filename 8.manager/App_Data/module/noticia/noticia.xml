@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="noticia" version="1.0">
+		<!--Habilita o multi idioma para o módulo-->
+		<settings>
+			<title><![CDATA[Notícia]]></title>
+			<description><![CDATA[Descrição Notícia]]></description>
+
+			<!--
+      Adiciona a funcionalidade de multi linguagem ao módulo
+      Obs: Não esquecer de habilitar esta funcionalidade no web.config pois é ela quem habilita o funcionamento geral de multi linguagem no manager
+      Adcionar a seguinte linha no <appSettings>: 
+      <add key="enableMultiLanguage" value="true"/>
+
+      -->
+			<setting name="multiLanguage"  value="true" />
+
+			<setting name="controlVersion"  value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="10" />
+			<setting name="workflow" value="true" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="noticia" primaryKey="noticiaId" />
+
+		<forms>
+			<edit type="control" src="noticia.ascx" />
+		</forms>
+
+		<queries>
+
+			<query section="list" type="StoredProcedure" sql="NoticiaCarregar" />
+
+		</queries>
+
+		<!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+		<fields>
+
+			<TextBox
+			  name="dataHoraPublicacao"
+			  label="Data Publicação"
+			  required="false"
+			  sort="true"
+			  dataFieldName="dataHoraPublicacao"
+			  width="300"
+			  showInList="true"
+			  maxlength="50"
+			  translation="true"
+      />
+
+			<TextBox
+			  name="tituloNoticia"
+			  label="Título"
+			  required="true"
+			  sort="true"
+			  dataFieldName="tituloNoticia"
+			  width="300"
+			  showInList="true"
+			  maxlength="50"
+			  translation="true"
+      />
+
+			<!--<ListBox name="statusId"
+         translation="false"
+         label="Status"
+         dataFieldName="statusId"
+         showInList="true"
+         inListUseField="statusId"
+         required="true"
+         dataSource="StatusId"
+         dataTextField="descricao"
+         dataValueField="statusId"
+         
+       />-->
+
+		</fields>
+
+		<!--FILTROS-->
+		<filters>
+			<filter label="Título" field="tituloNoticia" />
+		</filters>
+
+	</module>
+
+</AG2Manager>

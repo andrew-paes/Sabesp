@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="categoriaArquivo" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Cadastro Arquivo Categoria]]></title>
+      <description><![CDATA[Descrição CategoriaArquivo]]></description>
+
+      <setting name="multiLanguage"  value="false" />
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+    </settings>
+ 
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="CategoriaArquivo" primaryKey="categoriaArquivoId" />
+
+    <queries>
+
+      <!--Exemplo com multi linguagem-->
+      <query section="list" type="StoredProcedure" sql="CategoriaArquivoCarregar" >
+      </query>
+
+      <query section="edit" type="StoredProcedure" sql="CategoriaArquivoCarregar" >
+      </query>
+
+    </queries>
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields>
+
+
+      <TextBox
+        name="Titulo"
+        label="Titulo"
+        required="true"
+        sort="true"
+        dataFieldName="titulo"
+        width="300"
+        showInList="true"
+        maxlength="128"
+        translation="false"
+      />
+
+    </fields>
+
+    <!--FILTROS-->
+    <filters>
+      <filter label="Título" field="titulo" />
+
+    </filters>
+
+  </module>
+</AG2Manager>

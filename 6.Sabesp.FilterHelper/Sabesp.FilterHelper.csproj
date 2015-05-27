@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sabesp.FilterHelper</RootNamespace>
+    <AssemblyName>Sabesp.FilterHelper</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArquivoFH.cs" />
+    <Compile Include="CategoriaArquivoFH.cs" />
+    <Compile Include="CidadeFH.cs" />
+    <Compile Include="ComunicadoFH.cs" />
+    <Compile Include="ComunicadoIdiomaFH.cs" />
+    <Compile Include="ContatoFH.cs" />
+    <Compile Include="ConteudoAvaliacaoFH.cs" />
+    <Compile Include="ConteudoFH.cs" />
+    <Compile Include="ConteudoHitsFH.cs" />
+    <Compile Include="ConteudoTagFH.cs" />
+    <Compile Include="ConteudoTipoFH.cs" />
+    <Compile Include="ControleFH.cs" />
+    <Compile Include="ControleIdiomaDadoArquivoFH.cs" />
+    <Compile Include="ControleIdiomaDadoFH.cs" />
+    <Compile Include="ControleIdiomaFH.cs" />
+    <Compile Include="ControleSessaoFH.cs" />
+    <Compile Include="ControleTipoFH.cs" />
+    <Compile Include="EscolaridadeFH.cs" />
+    <Compile Include="EstadoFH.cs" />
+    <Compile Include="EventoCategoriaFH.cs" />
+    <Compile Include="EventoCategoriaIdiomaFH.cs" />
+    <Compile Include="EventoFH.cs" />
+    <Compile Include="EventoFotoComentarioFH.cs" />
+    <Compile Include="EventoFotoFH.cs" />
+    <Compile Include="EventoIdiomaFH.cs" />
+    <Compile Include="FaleConoscoAssuntoFH.cs" />
+    <Compile Include="FaleConoscoMensagemFH.cs" />
+    <Compile Include="FaqCategoriaFH.cs" />
+    <Compile Include="FaqCategoriaIdiomaFH.cs" />
+    <Compile Include="FaqItemFH.cs" />
+    <Compile Include="FaqItemIdiomaFH.cs" />
+    <Compile Include="FormularioApoioInstitucionalFH.cs" />
+    <Compile Include="FormularioCicloConferenciaFH.cs" />
+    <Compile Include="FormularioCursoVazamentoFH.cs" />
+    <Compile Include="FormularioFH.cs" />
+    <Compile Include="FormularioImprensaFH.cs" />
+    <Compile Include="FormularioInvestidorFH.cs" />
+    <Compile Include="FormularioInvestidorQualificacaoFH.cs" />
+    <Compile Include="FormularioSegurancaTrabalhoFH.cs" />
+    <Compile Include="FormularioVideoteca1FH.cs" />
+    <Compile Include="FormularioVideotecaFH.cs" />
+    <Compile Include="GlossarioFH.cs" />
+    <Compile Include="GlossarioIdiomaFH.cs" />
+    <Compile Include="HorarioPreferenciaFH.cs" />
+    <Compile Include="IdiomaExcecaoFH.cs" />
+    <Compile Include="IdiomaFH.cs" />
+    <Compile Include="IFilterHelper.cs" />
+    <Compile Include="IndicacaoFH.cs" />
+    <Compile Include="InfograficoFH.cs" />
+    <Compile Include="InfograficoIdiomaFH.cs" />
+    <Compile Include="LocalCursoFH.cs" />
+    <Compile Include="MaterialImprensaFH.cs" />
+    <Compile Include="MaterialImprensaIdiomaFH.cs" />
+    <Compile Include="ModeloFH.cs" />
+    <Compile Include="MunicipioAbaFH.cs" />
+    <Compile Include="MunicipioFH.cs" />
+    <Compile Include="NoticiaFH.cs" />
+    <Compile Include="NoticiaIdiomaFH.cs" />
+    <Compile Include="NoticiaImagemComentarioFH.cs" />
+    <Compile Include="NoticiaImagemFH.cs" />
+    <Compile Include="NoticiaTesteFH.cs" />
+    <Compile Include="NoticiaTesteIdiomaFH.cs" />
+    <Compile Include="PodcastCategoriaFH.cs" />
+    <Compile Include="PodcastCategoriaIdiomaFH.cs" />
+    <Compile Include="PodcastFH.cs" />
+    <Compile Include="PodcastIdiomaFH.cs" />
+    <Compile Include="ProdutoFH.cs" />
+    <Compile Include="ProdutoIdiomaFH.cs" />
+    <Compile Include="ProdutoImagemFH.cs" />
+    <Compile Include="ProdutoTipoFH.cs" />
+    <Compile Include="ProdutoTipoIdiomaFH.cs" />
+    <Compile Include="ProjetoEspecialFH.cs" />
+    <Compile Include="ProjetoEspecialIdiomaFH.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegiaoFH.cs" />
+    <Compile Include="ReleaseFH.cs" />
+    <Compile Include="ReleaseIdiomaFH.cs" />
+    <Compile Include="ReleaseImagemComentarioFH.cs" />
+    <Compile Include="ReleaseImagemFH.cs" />
+    <Compile Include="SecaoFH.cs" />
+    <Compile Include="SecaoIdiomaFH.cs" />
+    <Compile Include="SolucaoAmbientalFH.cs" />
+    <Compile Include="TagFH.cs" />
+    <Compile Include="TipoImovelFH.cs" />
+    <Compile Include="VideoFH.cs" />
+    <Compile Include="VideoIdiomaFH.cs" />
+    <Compile Include="WorkflowFH.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3.Sabesp.BO\Sabesp.BO.csproj">
+      <Project>{C4FC704E-2AFA-459B-8B08-44EF8E23F744}</Project>
+      <Name>Sabesp.BO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

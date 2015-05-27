@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="noticia" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Notícia Teste]]></title>
+      <description><![CDATA[Descrição noticia]]></description>
+
+      <!--
+      Adiciona a funcionalidade de multi linguagem ao módulo
+      Obs: Não esquecer de habilitar esta funcionalidade no web.config pois é ela quem habilita o funcionamento geral de multi linguagem no manager
+      Adcionar a seguinte linha no <appSettings>: 
+      <add key="enableMultiLanguage" value="true"/>
+
+      -->
+      <setting name="multiLanguage"  value="true" />
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+      <setting name="workflow" value="true" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="noticiaTeste" primaryKey="noticiaTesteId" />
+
+    <forms>
+      <edit type="control" src="noticiaTeste.ascx" />
+    </forms>
+
+    <queries>
+
+      <query section="list" type="StoredProcedure" sql="NoticiaTesteSelect" />
+
+    </queries>
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields>
+
+      <TextBox
+        name="titulo"
+        label="Título"
+        required="true"
+        sort="true"
+        dataFieldName="titulo"
+        width="300"
+        showInList="true"
+        maxlength="50"
+        translation="true"
+      />
+
+      <ListBox name="status"
+         translation="false"
+         label="Status"
+         dataFieldName="statusId"
+         showInList="true"
+         inListUseField="status"
+         required="true"
+         dataSource="Status"
+         dataTextField="descricao"
+         dataValueField="statusId"
+         
+       />
+
+    </fields>
+
+    <!--FILTROS-->
+    <filters>
+      <filter label="Título" field="titulo" />
+    </filters>
+
+  </module>
+
+</AG2Manager>

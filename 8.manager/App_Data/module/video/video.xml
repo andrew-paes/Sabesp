@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="video" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Cadastro Videos]]></title>
+      <description><![CDATA[Descrição Videos]]></description>
+
+      <!--
+      Adiciona a funcionalidade de multi linguagem ao módulo
+      Obs: Não esquecer de habilitar esta funcionalidade no web.config pois é ela quem habilita o funcionamento geral de multi linguagem no manager
+      Adcionar a seguinte linha no <appSettings>: 
+      <add key="enableMultiLanguage" value="true"/>
+
+      -->
+      <setting name="multiLanguage"  value="true" />
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+      <setting name="workflow" value="true" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="video" primaryKey="videoId" />
+
+    <forms>
+      <edit type="control" src="video.ascx" />
+    </forms>
+    
+    <queries>
+
+      <!--Exemplo com multi linguagem-->
+      <query section="list" type="StoredProcedure" sql="VideoCarregar" >
+      </query>
+
+      <!--<query section="edit" type="StoredProcedure" sql="ComunicadoAtualizar" >
+      </query>-->
+    </queries>
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields>
+
+      <TextBox
+        name="tituloVideo"
+        label="Título "
+        required="true"
+        sort="true"
+        dataFieldName="tituloVideo"
+        width="450"
+        showInList="true"
+        maxlength="200"
+        translation="true"
+      />
+      
+    </fields>
+
+    <!--FILTROS-->
+    <filters>
+      <filter label="Título" field="tituloVideo" />
+    </filters>
+    
+  </module>
+
+</AG2Manager>

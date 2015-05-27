@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="contato" version="1.0">
+		<!--Habilita o multi idioma para o módulo-->
+		<settings>
+			<title><![CDATA[Cadastro Contato]]></title>
+			<description><![CDATA[Descrição Contato]]></description>
+			<setting name="multiLanguage"  value="false" />
+			<setting name="controlVersion"  value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="20" />
+			<setting name="workflow" value="false" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteContato" />
+		</settings>
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Contato" primaryKey="contatoId" />
+
+		<forms>
+			<edit type="control" src="contato.ascx" />
+		</forms>
+
+		<queries>
+
+			<!--Exemplo com multi linguagem-->
+			<query section="list" type="StoredProcedure" sql="ContatoCarregar" >
+			</query>
+
+			<query section="edit" type="StoredProcedure" sql="ContatoCarregar" >
+			</query>
+
+		</queries>
+
+		<!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+		<fields>
+
+			<!--<ListBox
+				name="formularioId"
+				label="Formulário"
+				dataFieldName="formularioId"
+				showInList="false"
+				inListUseField="Formulario_nomeFormulario"
+				required="false"
+				dataSource="PROC:FormularioCarregar"
+				dataTextField="nomeFormulario"
+				dataValueField="formularioId"
+			/>-->
+
+			<TextBox
+				name="nomeContato"
+				label="Nome Contato"
+				required="true"
+				sort="true"
+				dataFieldName="nomeContato"
+				width="300"
+				showInList="true"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<TextBox
+				name="emailContato"
+				label="E-mail Contato"
+				required="true"
+				sort="true"
+				dataFieldName="emailContato"
+				width="300"
+				showInList="true"
+				maxlength="50"
+				translation="false"
+				/>
+
+		</fields>
+
+		<!--FILTROS-->
+		<filters>
+			<!--<filter label="Formulário" field="formularioId" filterExpression="Formulario_formularioId="  />-->
+			<filter label="Nome Contato" field="nomeContato" />
+		</filters>
+
+	</module>
+
+</AG2Manager>

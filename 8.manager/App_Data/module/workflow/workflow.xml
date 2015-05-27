@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="workflow" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Cadastro Workflow]]></title>
+      <description><![CDATA[Descrição workflow]]></description>
+
+      <!--
+      Adiciona a funcionalidade de multi linguagem ao módulo
+      Obs: Não esquecer de habilitar esta funcionalidade no web.config pois é ela quem habilita o funcionamento geral de multi linguagem no manager
+      Adcionar a seguinte linha no <appSettings>: 
+      <add key="enableMultiLanguage" value="true"/>
+
+      -->
+      <setting name="multiLanguage"  value="false" />
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="Workflow" primaryKey="WorkflowId" />
+
+    <forms>
+      <edit type="control" src="workflow.ascx" />
+    </forms>
+
+    <!--Caso queira usar na query SQL o id do usuário logado ou perfil do mesmo, insera as respectivas expressões onde você desejar imprimir o seu valor:
+    {USER_ID}
+    {PERFIL_ID}
+    {IDIOMA_ID}
+    
+    Obs: As expressões acima estão listadas na classe SqlClause (Name Space Ag2.Manager.Dicionary) sinta-se a vontade em adicionar novas expressões na lista.
+    -->
+    <queries>
+
+      <!--
+      type - Nova propriedade da tag query, serve para informar se você irá usar um string command ou uma Stored Procedure command.
+      Obs: Caso não seja informada esta propriedade o sistema usa como padrão a (SqlStringCommand).
+      As opções aceitas são:
+      -StoredProcedure
+      -Sql
+      
+      Existe a possibilidade de passar parametros para a Procedure.
+      Ex:
+      
+      <query section="list" type="StoredProcedure" sql="PC_Select">
+        <addParameter name="@nome" type="string" value="Fulano" />
+        <addParameter name="@casado" type="bool" value="1" />
+      </query>
+      
+      -->
+
+      <!--Exemplo com multi linguagem-->
+      <query section="list" type="StoredProcedure" sql="WorkflowSelect" >
+      </query>
+
+      <query section="edit" type="StoredProcedure" sql="WorkflowInsertUpdate" >
+      </query>
+
+
+      <!--<query section="list" type="Sql" sql="
+            SELECT N.*, NI.titulo ,C.descricao FROM workflow N
+            INNER JOIN dbo.workflow_Idioma NI ON NI.workflowId = N.workflowId
+            INNER JOIN categoria C ON C.categoriaId = N.categoriaId 
+            WHERE idiomaId = {IDIOMA_ID}" >
+      </query>-->
+
+      <!--Exemplo sem multi linguagem-->
+      <!--<query section="list" sql="
+            SELECT N.*, C.descricao FROM workflow N
+            INNER JOIN categoria C ON C.categoriaId = N.categoriaId 
+      " />-->
+
+      <!--<query section="export" sql="SELECT workflowId as 'Código da Workflow', titulo as 'Título da Workflow' FROM workflow" />-->
+    </queries>
+
+    <!--INFORME AQUI O USERCONTROL (.ASCX) QUE VOCÊ DESEJA QUE A PÁGINA DE EDIÇÃO CARREGUE-->
+    <!--<forms>
+      <edit type="control" src="workflow.ascx" />
+    </forms>-->
+
+    <!--OPÇÕES PARA NOVAS FUNCIONALIDADES-->
+    <!--<options>
+      <option querySection="export" value="excel" name="Exportar (Excel)" />
+      <option querySection="export" value="csv" name="Exportar (CSV)" />
+    </options>-->
+
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields>
+
+      <ListBox name="moduleId"
+           label="Módulo"
+           dataFieldName="moduleId"
+           showInList="true"
+           inListUseField="modulo"
+           required="true"
+           dataSource="ag2mngMenu"
+           dataTextField="name"
+           dataValueField="menuId"
+       />
+
+      <TextBox
+          name="conteudoDescricao"
+          label="Descrição Conteúdo"
+          required="true"
+          sort="true"
+          dataFieldName="conteudoDescricao"
+          width="300"
+          showInList="true"
+          maxlength="250"
+      />
+
+      <TextBox
+          name="UserName"
+          label="Usuário"
+          required="true"
+          sort="true"
+          dataFieldName="UserName"
+          width="300"
+          showInList="true"
+          maxlength="50"
+      />
+
+      <ListBox name="fluxoId"
+           label="Fluxo"
+           dataFieldName="fluxoId"
+           showInList="true"
+           inListUseField="fluxo"
+           required="true"
+           dataSource="Fluxo"
+           dataTextField="descricao"
+           dataValueField="fluxoId"
+       />
+
+      <ListBox name="statusId"
+           label="Status"
+           dataFieldName="statusId"
+           showInList="true"
+           inListUseField="status"
+           required="true"
+           dataSource="Status"
+           dataTextField="descricao"
+           dataValueField="statusId"
+       />
+
+      <Date name="ultimaAlteracao" label="Ultima Alteração" dataFieldName="ultimaAlteracao" required="true" showInList="true" />
+
+      <!--HIDDEN-->
+      <!--<Hidden name="tipoPontoId" label="" dataFieldName="tipoPontoId" dbType="Int32" value="1"  />-->
+
+      <!--DROPDOWN EDITAVEL-->
+      <!--Obs: Este controle não funciona no modo multi idioma-->
+      <!--<EditableListBox name="categoria"
+        label="Categoria"
+        dataFieldName="CategoriaId"
+        showInList="true"
+        inListUseField="descricao"
+        required="true"
+        tableName="categoria"
+        dataTextField="descricao"
+        dataValueField="CategoriaId"
+       />-->
+
+      <!--DROPDOWN NORMAL-->
+      <!--<ListBox name="categoria"
+           label="Categoria"
+           dataFieldName="CategoriaId"
+           showInList="true"
+           inListUseField="descricao"
+           required="true"
+           dataSource="categoria"
+           dataTextField="descricao"
+           dataValueField="CategoriaId"
+       />-->
+
+      <!--LABEL para textos informativos-->
+      <!--<Label name="label1">
+        <![CDATA[
+          Aqui vai o sei texto na <strong style="color: red;"><i>formatação</i></strong> HTML que você quizer
+        ]]>
+      </Label>-->
+
+      <!--CHECKBOX-->
+      <!--<CheckBox name="ativo" label="Ativo" dataFieldName="ativo" dbType="StringFixedLength" Checked="true" />-->
+
+      <!--DROPDOWNLIST com itens pré definidos-->
+      <!--<ListBox name="status" label="status" dataFieldName="CategoriaId" dataValueField="CategoriaId" showInList="true">
+        <listItem text="Pendente" value="0" />
+        <listItem text="Aprovado" value="108" />
+        <listItem text="Reprovado" value="2" />
+      </ListBox>-->
+
+      <!--
+      TEXTBOX
+      Adicionar o atrubuto (inputMask) caso queira aplicar uma mascara ao textbox
+      Tipo aceitos:
+      cpf
+      cnpj
+      rg
+      cep
+      data
+      hora
+      ddd
+      telefone
+      moeda
+      numero
+      -->
+      <!--Data-->
+      <!--<Date name="data" label="Data Cadastro" dataFieldName="dataCadastro" required="true" showInList="true" />-->
+
+    </fields>
+
+    <!--FILTROS-->
+    <filters>
+      <filter label="Módulo" field="moduleId" />
+      <filter label="Fluxo" field="fluxoId" />
+      <filter label="Status" field="statusId" />
+      <filter label="Usuário" field="UserName" />
+      <filter label="Ultima Alteração" field="ultimaAlteracao" />
+
+      <!--
+      DATE
+      Para fazer filtro por período insira a propriedade (filterType="range")
+      Ex: <filter label="Data" filterType="range" field="data" />
+      -->
+
+    </filters>
+
+    <!--EXEMPLO DE COMO INSERIR CONSTRAINTS-->
+    <!--<constraints>
+      <constraint name="posta_codigoAgencia" type="unique">
+        <field name="tipoAgencia" dataFieldName="A.tipoAgenciaId" />
+        <field name="codigoAgencia" dataFieldName="Ponto.codigoAgencia" />
+      </constraint>
+    </constraints>-->
+
+  </module>
+
+</AG2Manager>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="controleSessao" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Cadastro Controle por Seção]]></title>
+      <description><![CDATA[Descrição Controle por Seção]]></description>
+      <setting name="multiLanguage"  value="false" />
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+      <setting name="workflow" value="true" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="Secao" primaryKey="secaoId" />
+
+    <forms>
+      <edit type="control" src="controleSessao.ascx" />
+    </forms>
+
+    <queries>
+
+      <!--Exemplo com multi linguagem-->
+      <query section="list" type="StoredProcedure" sql="secaoControleCarregar" >
+      </query>
+
+    </queries>
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields>
+
+      <TextBox
+        name="titulo"
+        label="Título"
+        required="true"
+        sort="true"
+        dataFieldName="titulo"
+        width="300"
+        showInList="true"
+        maxlength="50"
+        translation="true"
+      />
+
+    </fields>
+
+    <!--FILTROS-->
+    <filters>
+      <filter label="Título" field="titulo" />
+    </filters>
+
+  </module>
+
+</AG2Manager>

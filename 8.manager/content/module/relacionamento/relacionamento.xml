@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="relacionamento" version="1.0">
+        <settings>
+            <title><![CDATA[Listagem de Conteúdos Relacionados]]></title>
+            <description><![CDATA[Listagem de Conteúdos Relacionados]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="conteudorelacionado" primaryKey="conteudoPaiId" />
+
+        <queries>
+            <query section="list" sql=" select conteudoRelacionado.conteudoidPai, conteudo.conteudoTipoId, conteudotipo.tipo	from conteudoRelacionado join conteudo ON conteudo.conteudoId = conteudoRelacionado.conteudoIdPai	join conteudotipo on conteudotipo.conteudotipoid = conteudo.conteudotipoid ORDER BY 1 DESC " />
+        </queries>
+
+        <forms>
+            <edit type="control" src="relacionamento.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <ListBox name="conteudoTipoId"
+             label="Tipo"
+             dataFieldName="conteudoTipoId"
+             showInList="true"
+             inListUseField="Tipo"
+             required="true"
+             dataSource="conteudotipo"
+             dataTextField="tipo"
+             dataValueField="conteudoTipoId" />
+
+            <!--<TextBox name="descricaoConteudo" label="Descrição" sort="true" dataFieldName="descricaoConteudo" showInList="true" required="true" maxlength="128" />-->
+        </fields>
+        <filters>
+            <!--<filter label="Descrição" field="descricaoConteudo" filterExpression="descricaoConteudo"/>-->
+            <filter label="Tipo" field="conteudoTipoId" filterExpression="conteudo.conteudoTipoId="/>
+        </filters>
+
+    </module>
+
+
+</AG2Manager>

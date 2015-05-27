@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="controle" version="1.0">
+		<!--Habilita o multi idioma para o módulo-->
+		<settings>
+			<title><![CDATA[Cadastro Controle]]></title>
+			<description><![CDATA[Descrição Controle]]></description>
+			<setting name="multiLanguage"  value="false" />
+			<setting name="controlVersion"  value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="20" />
+			<setting name="workflow" value="false" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Controle" primaryKey="controleId" />
+
+		<queries>
+
+			<!--Exemplo com multi linguagem-->
+			<query section="list" type="StoredProcedure" sql="ControleCarregar" >
+			</query>
+
+			<query section="edit" type="StoredProcedure" sql="ControleCarregar" >
+			</query>
+
+		</queries>
+
+		<!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+		<fields>
+
+			<ListBox 
+				name="controleTipoId"
+				label="Tipo Controle"
+				dataFieldName="controleTipoId"
+				showInList="true"
+				inListUseField="ControleTipo_nome"
+				required="true"
+				dataSource="PROC:ControleDinamicoCarregar"
+				dataTextField="ControleTipo_nome"
+				dataValueField="controleTipoId"
+				/>
+
+			<TextBox
+				name="nome"
+				label="Nome Controle"
+				required="true"
+				sort="true"
+				dataFieldName="nome"
+				width="300"
+				showInList="true"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<CheckBox 
+				name="ativo" 
+				label="Ativo" 
+				translation="false" 
+				dataFieldName="ativo" 
+				sort="true" 
+				showInList="false" 
+				/>
+
+		</fields>
+
+		<!--FILTROS-->
+		<filters>
+			<filter label="Nome Controle" field="nomeControle" />
+		</filters>
+
+	</module>
+
+</AG2Manager>

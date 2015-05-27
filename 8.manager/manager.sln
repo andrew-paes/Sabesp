@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "manager", ".", "{0ADC4654-4F2D-4631-AEC2-92A607839A1D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}|Sabesp.ADO.dll;{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}|Sabesp.Data.dll;{C4FC704E-2AFA-459B-8B08-44EF8E23F744}|Sabesp.BO.dll;{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}|Sabesp.DAL.dll;{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}|Sabesp.FilterHelper.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/manager"
+		Debug.AspNetCompiler.PhysicalPath = "..\manager\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\manager\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/manager"
+		Release.AspNetCompiler.PhysicalPath = "..\manager\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\manager\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4245"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.ADO", "..\Sabesp.ADO\Sabesp.ADO.csproj", "{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.BO", "..\Sabesp.BO\Sabesp.BO.csproj", "{C4FC704E-2AFA-459B-8B08-44EF8E23F744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.DAL", "..\Sabesp.DAL\Sabesp.DAL.csproj", "{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.Data", "..\Sabesp.Data\Sabesp.Data.csproj", "{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.FilterHelper", "..\Sabesp.FilterHelper\Sabesp.FilterHelper.csproj", "{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ADC4654-4F2D-4631-AEC2-92A607839A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ADC4654-4F2D-4631-AEC2-92A607839A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ADC4654-4F2D-4631-AEC2-92A607839A1D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ADC4654-4F2D-4631-AEC2-92A607839A1D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FC704E-2AFA-459B-8B08-44EF8E23F744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4FC704E-2AFA-459B-8B08-44EF8E23F744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4FC704E-2AFA-459B-8B08-44EF8E23F744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4FC704E-2AFA-459B-8B08-44EF8E23F744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

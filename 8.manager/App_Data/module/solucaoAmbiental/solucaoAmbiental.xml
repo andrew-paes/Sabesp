@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="solucaoAmbiental" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Solução Ambiental]]></title>
+      <description><![CDATA[SoluçãoDe Ambiental]]></description>
+
+      <!--
+      Adiciona a funcionalidade de multi linguagem ao módulo
+      Obs: Não esquecer de habilitar esta funcionalidade no web.config pois é ela quem habilita o funcionamento geral de multi linguagem no manager
+      Adcionar a seguinte linha no <appSettings>: 
+      <add key="enableMultiLanguage" value="true"/>
+
+      -->
+      <setting name="multiLanguage"  value="false" />
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+      <setting name="workflow" value="false" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="SolucaoAmbientalIdioma" primaryKey="idiomaId"/>
+
+    <forms>
+      <edit type="control" src="solucaoAmbiental.ascx" />
+    </forms>
+
+    <queries>
+
+      <query section="list" type="StoredProcedure" sql="SolucaoAmbientalIdiomaCarregar" />
+
+    </queries>
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields>
+
+      <TextBox
+        name="Titulo"
+        label="Título"
+        required="true"
+        sort="true"
+        dataFieldName="tituloPrincipal"
+        width="300"
+        showInList="true"
+        maxlength="50"
+        translation="true"
+      />
+        <TextBox
+          name="name"
+          label="Idioma"
+          required="false"
+          dataFieldName="name"
+          width="30"
+          showInList="true"
+          maxlength="50"          
+      />      
+
+    </fields>
+
+  </module>
+
+</AG2Manager>

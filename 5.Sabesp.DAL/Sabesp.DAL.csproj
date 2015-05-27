@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sabesp.DAL</RootNamespace>
+    <AssemblyName>Sabesp.DAL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IBuscaConteudoDAL.cs" />
+    <Compile Include="IArquivoDAL.cs" />
+    <Compile Include="ICategoriaArquivoDAL.cs" />
+    <Compile Include="ICidadeDAL.cs" />
+    <Compile Include="IComunicadoDAL.cs" />
+    <Compile Include="IComunicadoIdiomaDAL.cs" />
+    <Compile Include="IContatoDAL.cs" />
+    <Compile Include="IConteudoAvaliacaoDAL.cs" />
+    <Compile Include="IConteudoDAL.cs" />
+    <Compile Include="IConteudoHitsDAL.cs" />
+    <Compile Include="IConteudoTagDAL.cs" />
+    <Compile Include="IConteudoTipoDAL.cs" />
+    <Compile Include="IControleDAL.cs" />
+    <Compile Include="IControleIdiomaDadoArquivoDAL.cs" />
+    <Compile Include="IControleIdiomaDadoDAL.cs" />
+    <Compile Include="IControleIdiomaDAL.cs" />
+    <Compile Include="IControleSessaoDAL.cs" />
+    <Compile Include="IControleTipoDAL.cs" />
+    <Compile Include="IEscolaridadeDAL.cs" />
+    <Compile Include="IEstadoDAL.cs" />
+    <Compile Include="IEventoCategoriaDAL.cs" />
+    <Compile Include="IEventoCategoriaIdiomaDAL.cs" />
+    <Compile Include="IEventoDAL.cs" />
+    <Compile Include="IEventoFotoComentarioDAL.cs" />
+    <Compile Include="IEventoFotoDAL.cs" />
+    <Compile Include="IEventoIdiomaDAL.cs" />
+    <Compile Include="IFaleConoscoAssuntoDAL.cs" />
+    <Compile Include="IFaleConoscoMensagemDAL.cs" />
+    <Compile Include="IFaqCategoriaDAL.cs" />
+    <Compile Include="IFaqCategoriaIdiomaDAL.cs" />
+    <Compile Include="IFaqItemDAL.cs" />
+    <Compile Include="IFaqItemIdiomaDAL.cs" />
+    <Compile Include="IFormularioApoioInstitucionalDAL.cs" />
+    <Compile Include="IFormularioCicloConferenciaDAL.cs" />
+    <Compile Include="IFormularioCursoVazamentoDAL.cs" />
+    <Compile Include="IFormularioDAL.cs" />
+    <Compile Include="IFormularioImprensaDAL.cs" />
+    <Compile Include="IFormularioInvestidorDAL.cs" />
+    <Compile Include="IFormularioInvestidorQualificacaoDAL.cs" />
+    <Compile Include="IFormularioSegurancaTrabalhoDAL.cs" />
+    <Compile Include="IFormularioVideoteca1DAL.cs" />
+    <Compile Include="IFormularioVideotecaDAL.cs" />
+    <Compile Include="IGlossarioDAL.cs" />
+    <Compile Include="IGlossarioIdiomaDAL.cs" />
+    <Compile Include="IHorarioPreferenciaDAL.cs" />
+    <Compile Include="IIdiomaDAL.cs" />
+    <Compile Include="IIndicacaoDAL.cs" />
+    <Compile Include="IInfograficoDAL.cs" />
+    <Compile Include="IInfograficoIdiomaDAL.cs" />
+    <Compile Include="ILocalCursoDAL.cs" />
+    <Compile Include="IMaterialImprensaDAL.cs" />
+    <Compile Include="IMaterialImprensaIdiomaDAL.cs" />
+    <Compile Include="IModeloDAL.cs" />
+    <Compile Include="IMunicipioAbaDAL.cs" />
+    <Compile Include="IMunicipioDAL.cs" />
+    <Compile Include="INoticiaDAL.cs" />
+    <Compile Include="INoticiaIdiomaDAL.cs" />
+    <Compile Include="INoticiaImagemComentarioDAL.cs" />
+    <Compile Include="INoticiaImagemDAL.cs" />
+    <Compile Include="INoticiaTesteDAL.cs" />
+    <Compile Include="INoticiaTesteIdiomaDAL.cs" />
+    <Compile Include="IPodcastCategoriaDAL.cs" />
+    <Compile Include="IPodcastCategoriaIdiomaDAL.cs" />
+    <Compile Include="IPodcastDAL.cs" />
+    <Compile Include="IPodcastIdiomaDAL.cs" />
+    <Compile Include="IProdutoDAL.cs" />
+    <Compile Include="IProdutoIdiomaDAL.cs" />
+    <Compile Include="IProdutoImagemDAL.cs" />
+    <Compile Include="IProdutoTipoDAL.cs" />
+    <Compile Include="IProdutoTipoIdiomaDAL.cs" />
+    <Compile Include="IProjetoEspecialDAL.cs" />
+    <Compile Include="IProjetoEspecialIdiomaDAL.cs" />
+    <Compile Include="IRegiaoDAL.cs" />
+    <Compile Include="IReleaseDAL.cs" />
+    <Compile Include="IReleaseIdiomaDAL.cs" />
+    <Compile Include="IReleaseImagemComentarioDAL.cs" />
+    <Compile Include="IReleaseImagemDAL.cs" />
+    <Compile Include="ISecaoDAL.cs" />
+    <Compile Include="ISecaoIdiomaDAL.cs" />
+    <Compile Include="ISolucaoAmbientalDAL.cs" />
+    <Compile Include="ITagDAL.cs" />
+    <Compile Include="ITipoImovelDAL.cs" />
+    <Compile Include="IVideoDAL.cs" />
+    <Compile Include="IVideoIdiomaDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3.Sabesp.BO\Sabesp.BO.csproj">
+      <Project>{C4FC704E-2AFA-459B-8B08-44EF8E23F744}</Project>
+      <Name>Sabesp.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\6.Sabesp.FilterHelper\Sabesp.FilterHelper.csproj">
+      <Project>{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}</Project>
+      <Name>Sabesp.FilterHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

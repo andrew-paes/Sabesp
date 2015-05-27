@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="controle" version="1.0">
+		<!--Habilita o multi idioma para o módulo-->
+		<settings>
+			<title><![CDATA[Cadastro Titulo Imagem Link Texto]]></title>
+			<description><![CDATA[Titulo Imagem Link Texto]]></description>
+			<setting name="multiLanguage"  value="true" />
+			<setting name="controlVersion"  value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="10" />
+			<setting name="workflow" value="true" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Controle" primaryKey="controleId" />
+
+		<forms>
+			<edit type="control" src="tituloImagemLinkTexto.ascx" />
+		</forms>
+
+		<queries>
+
+			<!--Exemplo com multi linguagem-->
+			<query section="list" type="StoredProcedure" sql="ControleTituloImagemLinkTexto" >
+			</query>
+
+		</queries>
+
+		<!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+		<fields>
+
+			<TextBox
+			  name="nome"
+			  label="Nome Controle"
+			  required="true"
+			  sort="true"
+			  dataFieldName="nome"
+			  width="300"
+			  showInList="true"
+			  maxlength="50"
+			  translation="false"
+		/>
+
+			<TextBox
+				  name="titulo"
+				  label="Tiíulo Controle"
+				  required="true"
+				  sort="true"
+				  dataFieldName="titulo"
+				  width="300"
+				  showInList="true"
+				  maxlength="50"
+				  translation="false"
+		/>
+
+		</fields>
+
+		<!--FILTROS-->
+		<filters>
+			<filter label="Nome Controle" field="nome" />
+		</filters>
+
+	</module>
+
+</AG2Manager>

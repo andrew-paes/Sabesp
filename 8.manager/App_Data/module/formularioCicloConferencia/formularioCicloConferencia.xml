@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="formularioCicloConferencia" version="1.0">
+		<settings>
+			<title><![CDATA[Visualizacao Formulario de Ciclo de Conferencia]]></title>
+			<description><![CDATA[Visualizacao Formulario de Ciclo de Conferencia]]></description>
+			<setting name="multiLanguage" value="false" />
+			<setting name="controlVersion" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="20" />
+			<setting name="workflow" value="false" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="FormularioCicloConferencia" primaryKey="FormularioCicloConferenciaId" />
+
+		<queries>
+
+			<!--Exemplo com multi linguagem-->
+			<query section="list" type="StoredProcedure" sql="FormularioCicloConferenciaCarregar" >
+			</query>
+
+			<query section="edit" type="StoredProcedure" sql="FormularioCicloConferenciaCarregar" >
+			</query>
+
+		</queries>
+
+		<!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+		<fields>
+
+			<Date
+				name="dataHoraContato"
+				label="Data Contato"
+				dbType="Date"
+				dataFieldName="dataHoraContato"
+				required="true"
+				sort="true"
+				showInList="true"
+				translation="false"
+			/>
+
+			<ListBox
+				name="estadoId"
+				label="Estado"
+				dataFieldName="estadoId"
+				showInList="true"
+				inListUseField="Estado_nomeEstado"
+				required="false"
+				dataSource="PROC:EstadoCarregar"
+				dataTextField="nomeEstado"
+				dataValueField="estadoId"
+			/>
+
+			<TextBox
+				name="cidade"
+				label="Cidade"
+				required="true"
+				sort="true"
+				dataFieldName="cidade"
+				width="150"
+				showInList="false"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<TextBox
+				name="nome"
+				label="Nome"
+				required="true"
+				sort="true"
+				dataFieldName="nome"
+				width="300"
+				showInList="true"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<TextBox
+				name="email"
+				label="E-mail"
+				required="true"
+				sort="true"
+				dataFieldName="email"
+				width="300"
+				showInList="true"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<TextBox
+				name="cep"
+				label="CEP"
+				required="true"
+				sort="true"
+				dataFieldName="cep"
+				width="50"
+				showInList="false"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<TextBox
+				name="endereco"
+				label="Endereo"
+				required="true"
+				sort="true"
+				dataFieldName="endereco"
+				width="300"
+				showInList="false"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<TextBox
+				name="bairro"
+				label="Bairro"
+				required="true"
+				sort="true"
+				dataFieldName="bairro"
+				width="300"
+				showInList="false"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<TextBox
+				name="telefoneDDD"
+				label="DDD"
+				required="true"
+				sort="true"
+				dataFieldName="telefoneDDD"
+				width="20"
+				showInList="false"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<TextBox
+				name="telefoneNumero"
+				label="DDD"
+				required="true"
+				sort="true"
+				dataFieldName="telefoneNumero"
+				width="50"
+				showInList="false"
+				maxlength="50"
+				translation="false"
+				/>
+
+			<TextBox
+				name="empresa"
+				label="Empresa"
+				required="true"
+				sort="true"
+				dataFieldName="empresa"
+				width="200"
+				showInList="false"
+				maxlength="100"
+				translation="false"
+				/>
+
+
+			<CheckBox
+				name="receberInformacaoSabesp"
+				label="Recebe Informação SABESP"
+				translation="false"
+				dataFieldName="receberInformacaoSabesp"
+				sort="true"
+				showInList="false"
+				/>
+
+			<CheckBox
+				name="receberInformacaoEventos"
+				label="Recebe Informação Eventos"
+				translation="false"
+				dataFieldName="receberInformacaoEventos"
+				sort="true"
+				showInList="false"
+				/>
+
+		</fields>
+
+		<!--FILTROS-->
+		<filters>
+			<filter label="Data" field="dataHoraContato" filterType="range" />
+			<filter label="Nome" field="nome" />
+			<filter label="E-mail" field="email" />
+			<filter label="Cidade" field="cidade" />
+			<filter label="Estado" field="estadoId" filterExpression="Estado_estadoId=" />
+		</filters>
+
+	</module>
+
+</AG2Manager>

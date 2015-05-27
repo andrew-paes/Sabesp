@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sabesp.ADO</RootNamespace>
+    <AssemblyName>Sabesp.ADO</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\7.Lib\Enterprise Library 3.1\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design">
+      <HintPath>..\7.Lib\Enterprise Library 3.1\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet">
+      <HintPath>..\7.Lib\Enterprise Library 3.1\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF">
+      <HintPath>..\7.Lib\Enterprise Library 3.1\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms">
+      <HintPath>..\7.Lib\Enterprise Library 3.1\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder">
+      <HintPath>..\7.Lib\Enterprise Library 3.1\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADOSuper.cs" />
+    <Compile Include="ArquivoADO.cs" />
+    <Compile Include="CategoriaArquivoADO.cs" />
+    <Compile Include="CidadeADO.cs" />
+    <Compile Include="ComunicadoADO.cs" />
+    <Compile Include="ComunicadoIdiomaADO.cs" />
+    <Compile Include="ContatoADO.cs" />
+    <Compile Include="ConteudoADO.cs" />
+    <Compile Include="ConteudoAvaliacaoADO.cs" />
+    <Compile Include="ConteudoHitsADO.cs" />
+    <Compile Include="ConteudoTagADO.cs" />
+    <Compile Include="ConteudoTipoADO.cs" />
+    <Compile Include="ControleADO.cs" />
+    <Compile Include="ControleIdiomaADO.cs" />
+    <Compile Include="ControleIdiomaDadoADO.cs" />
+    <Compile Include="ControleIdiomaDadoArquivoADO.cs" />
+    <Compile Include="ControleSessaoADO.cs" />
+    <Compile Include="ControleTipoADO.cs" />
+    <Compile Include="BuscaConteudoADO.cs" />
+    <Compile Include="EscolaridadeADO.cs" />
+    <Compile Include="EstadoADO.cs" />
+    <Compile Include="EventoADO.cs" />
+    <Compile Include="EventoCategoriaADO.cs" />
+    <Compile Include="EventoCategoriaIdiomaADO.cs" />
+    <Compile Include="EventoFotoADO.cs" />
+    <Compile Include="EventoFotoComentarioADO.cs" />
+    <Compile Include="EventoIdiomaADO.cs" />
+    <Compile Include="FaleConoscoAssuntoADO.cs" />
+    <Compile Include="FaleConoscoMensagemADO.cs" />
+    <Compile Include="FaqCategoriaADO.cs" />
+    <Compile Include="FaqCategoriaIdiomaADO.cs" />
+    <Compile Include="FaqItemADO.cs" />
+    <Compile Include="FaqItemIdiomaADO.cs" />
+    <Compile Include="FormularioADO.cs" />
+    <Compile Include="FormularioApoioInstitucionalADO.cs" />
+    <Compile Include="FormularioCicloConferenciaADO.cs" />
+    <Compile Include="FormularioCursoVazamentoADO.cs" />
+    <Compile Include="FormularioImprensaADO.cs" />
+    <Compile Include="FormularioInvestidorADO.cs" />
+    <Compile Include="FormularioInvestidorQualificacaoADO.cs" />
+    <Compile Include="FormularioSegurancaTrabalhoADO.cs" />
+    <Compile Include="FormularioVideoteca1ADO.cs" />
+    <Compile Include="FormularioVideotecaADO.cs" />
+    <Compile Include="GlossarioADO.cs" />
+    <Compile Include="GlossarioIdiomaADO.cs" />
+    <Compile Include="HorarioPreferenciaADO.cs" />
+    <Compile Include="IdiomaADO.cs" />
+    <Compile Include="IndicacaoADO.cs" />
+    <Compile Include="InfograficoADO.cs" />
+    <Compile Include="InfograficoIdiomaADO.cs" />
+    <Compile Include="LocalCursoADO.cs" />
+    <Compile Include="MaterialImprensaADO.cs" />
+    <Compile Include="MaterialImprensaIdiomaADO.cs" />
+    <Compile Include="ModeloADO.cs" />
+    <Compile Include="MunicipioAbaADO.cs" />
+    <Compile Include="MunicipioADO.cs" />
+    <Compile Include="NoticiaADO.cs" />
+    <Compile Include="NoticiaIdiomaADO.cs" />
+    <Compile Include="NoticiaImagemADO.cs" />
+    <Compile Include="NoticiaImagemComentarioADO.cs" />
+    <Compile Include="NoticiaTesteADO.cs" />
+    <Compile Include="NoticiaTesteIdiomaADO.cs" />
+    <Compile Include="PodcastADO.cs" />
+    <Compile Include="PodcastCategoriaADO.cs" />
+    <Compile Include="PodcastCategoriaIdiomaADO.cs" />
+    <Compile Include="PodcastIdiomaADO.cs" />
+    <Compile Include="ProdutoADO.cs" />
+    <Compile Include="ProdutoIdiomaADO.cs" />
+    <Compile Include="ProdutoImagemADO.cs" />
+    <Compile Include="ProdutoTipoADO.cs" />
+    <Compile Include="ProdutoTipoIdiomaADO.cs" />
+    <Compile Include="ProjetoEspecialADO.cs" />
+    <Compile Include="ProjetoEspecialIdiomaADO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegiaoADO.cs" />
+    <Compile Include="ReleaseADO.cs" />
+    <Compile Include="ReleaseIdiomaADO.cs" />
+    <Compile Include="ReleaseImagemADO.cs" />
+    <Compile Include="ReleaseImagemComentarioADO.cs" />
+    <Compile Include="SecaoADO.cs" />
+    <Compile Include="SecaoIdiomaADO.cs" />
+    <Compile Include="SolucaoAmbientalADO.cs" />
+    <Compile Include="TagADO.cs" />
+    <Compile Include="TipoImovelADO.cs" />
+    <Compile Include="VideoADO.cs" />
+    <Compile Include="VideoIdiomaADO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3.Sabesp.BO\Sabesp.BO.csproj">
+      <Project>{C4FC704E-2AFA-459B-8B08-44EF8E23F744}</Project>
+      <Name>Sabesp.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\5.Sabesp.DAL\Sabesp.DAL.csproj">
+      <Project>{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}</Project>
+      <Name>Sabesp.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\6.Sabesp.FilterHelper\Sabesp.FilterHelper.csproj">
+      <Project>{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}</Project>
+      <Name>Sabesp.FilterHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

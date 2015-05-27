@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="municipio" version="1.0">
+		<!--Habilita o multi idioma para o módulo-->
+		<settings>
+			<title><![CDATA[Cadastro Município]]></title>
+			<description><![CDATA[Descrição Município]]></description>
+			<setting name="multiLanguage"  value="false" />
+			<setting name="controlVersion"  value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="20" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteMunicipio" />
+		</settings>
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Municipio" primaryKey="municipioId" />
+
+		<forms>
+			<edit type="control" src="municipio.ascx" />
+		</forms>
+
+		<queries>
+
+			<!--Exemplo com multi linguagem-->
+			<query section="list" type="StoredProcedure" sql="MunicipioCarregar" >
+			</query>
+
+			<query section="edit" type="StoredProcedure" sql="MunicipioCarregar" >
+			</query>
+
+		</queries>
+
+		<!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+		<fields>
+
+			<TextBox
+			name="nome"
+			label="Município"
+			required="true"
+			sort="true"
+			dataFieldName="nome"
+			width="300"
+			showInList="true"
+			maxlength="100"
+			translation="false"
+			/>
+
+		</fields>
+
+		<!--FILTROS-->
+		<filters>
+			<filter label="Municipio" field="nome" />
+		</filters>
+
+	</module>
+</AG2Manager>

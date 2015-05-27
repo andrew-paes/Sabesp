@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="comunicadoExemploXml" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Cadastro Comunicado]]></title>
+      <description><![CDATA[Descrição Comunicado]]></description>
+
+      <!--
+      Adiciona a funcionalidade de multi linguagem ao módulo
+      Obs: Não esquecer de habilitar esta funcionalidade no web.config pois é ela quem habilita o funcionamento geral de multi linguagem no manager
+      Adcionar a seguinte linha no <appSettings>: 
+      <add key="enableMultiLanguage" value="true"/>
+
+      -->
+      <setting name="multiLanguage"  value="true" />
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+      <setting name="workflow" value="true" />
+      <setting name="workflowTableName" value="Conteudo" />
+      <setting name="contentTableName" value="Conteudo" />
+      <setting name="contentType" value="3" />
+
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="comunicado" primaryKey="comunicadoId" />
+
+    <forms/>
+
+    <queries>
+
+      <!--Exemplo com multi linguagem-->
+      <query section="list" type="StoredProcedure" sql="ComunicadoCarregar" />
+
+      <query section="edit" type="StoredProcedure" sql="ComunicadoCarregar" >
+      </query>
+
+    </queries>
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields>
+
+      <TextBox
+        name="tituloComunicado"
+        label="Título"
+        required="true"
+        sort="true"
+        dataFieldName="tituloComunicado"
+        width="300"
+        showInList="true"
+        maxlength="50"
+        translation="true"
+        workflowDescription="true"
+      />
+
+      <TextBox
+        name="textoComunicado"
+        label="Texto"
+        required="true"
+        sort="true"
+        dataFieldName="textoComunicado"
+        width="300"
+        showInList="false"
+        maxlength="50"
+        translation="true"
+      />
+
+      <Date name="dataHoraPublicacao" label="Data Publicação" dbType="Date" dataFieldName="dataHoraPublicacao" required="true" sort="true" showInList="true" translation="false" />
+      <Date name="dataExibicaoInicio" label="Data Exibição Inicial" dbType="Date" dataFieldName="dataExibicaoInicio" required="true" sort="true" showInList="true" translation="false" />
+      <Date name="dataExibicaoFim" label="Data Exibição Final" dbType="Date" dataFieldName="dataExibicaoFim" required="true" sort="true" translation="false" showInList="true" />
+
+      <CheckBox name="destaqueHome" label="Destaque Home" translation="false" dataFieldName="destaqueHome" showInList="false" />
+      <CheckBox name="destaqueFiquePorDentro" label="Destaque Fique Por Dentro" translation="false" dataFieldName="destaqueFiquePorDentro" showInList="false" />
+      <CheckBox name="ativo" label="Ativo" translation="false" dataFieldName="ativo" showInList="false" />
+    </fields>
+
+    <!--FILTROS-->
+    <filters />
+
+  </module>
+
+</AG2Manager>

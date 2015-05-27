@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="secaoConteudoDetalhe" version="1.0">
+		<!--Habilita o multi idioma para o módulo-->
+		<settings>
+			<title><![CDATA[Cadastro Seção]]></title>
+			<description><![CDATA[Descrição Seção]]></description>
+			<setting name="multiLanguage"  value="true" />
+			<setting name="controlVersion"  value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="10" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Secao" primaryKey="secaoId" />
+
+		<queries>
+
+			<!--Exemplo com multi linguagem-->
+			<query section="list" type="StoredProcedure" sql="SecaoCarregar" >
+			</query>
+
+			<query section="edit" type="StoredProcedure" sql="SecaoCarregar" >
+			</query>
+
+		</queries>
+
+		<fields>
+
+			<TextBox
+			name="titulo"
+			label="Título"
+			required="true"
+			sort="true"
+			dataFieldName="titulo"
+			width="300"
+			showInList="true"
+			maxlength="50"
+			translation="true"
+			/>
+
+			<TextBox
+			name="tituloMenu"
+			label="Título Menu"
+			required="false"
+			sort="true"
+			dataFieldName="tituloMenu"
+			width="300"
+			showInList="false"
+			maxlength="100"
+			translation="true"
+			/>
+
+			<ListBox name="secaoIdPai"
+			label="Seção Pai"
+			dataFieldName="secaoIdPai"
+			showInList="false"
+			inListUseField="descricao"
+			required="false"
+
+			dataSource="PROC:SecaoRecursivoNemTodas null, @IdPai"
+			dataTextField="titulo"
+			dataValueField="secaoId"
+
+			/>
+
+			<ListBox name="modeloId"
+			label="Modelo"
+			dataFieldName="modeloId"
+			showInList="false"
+			inListUseField="descricao"
+			required="true"
+
+			dataSource="PROC:Select * From Modelo"
+			dataTextField="nome"
+			dataValueField="modeloId"
+			translation="false"
+			/>
+
+			<UploadFile
+			name="tituloArquivos"
+			dataFieldName="tituloArquivos"
+			translation="true"
+			label="Imagem Seção - (393px × 196px)"
+			runat="server"
+			allowedExtensions="*.*"
+			targetFolder="secao/"
+			maxFileLength="1024" />
+
+			<TextBox
+			name="ordem"
+			label="Ordem"
+			required="true"
+			sort="true"
+			dataFieldName="ordem"
+			width="40"
+			showInList="true"
+			maxlength="3"
+			translation="false"
+			/>
+
+			<HtmlTextBox
+			label="Texto"
+			name="texto"
+			dataFieldName="texto"
+			inListUseField="texto"
+			showInList="false"
+			required="false"
+			translation="true"
+			/>
+
+			<CheckBox name="ativo" label="Ativo" dataFieldName="ativo" dbType="StringFixedLength" Checked="true" translation="true" />
+
+			<CheckBox name="exibeNoMenu" label="Exibe no Menu" dataFieldName="exibeNoMenu" dbType="StringFixedLength" Checked="true" translation="false" />
+			
+			<CheckBox name="exibeNaHome" label="Destaque Home" dataFieldName="exibeNaHome" dbType="StringFixedLength" Checked="false" translation="false" />
+			
+			<TextBox
+			name="posicaoHome"
+			label="Posição Home"
+			required="false"
+			sort="true"
+			dataFieldName="posicaoHome"
+			width="15"
+			showInList="false"
+			maxlength="1"
+			translation="false"
+			/>			
+
+		</fields>
+
+		<!--FILTROS-->
+		<filters>
+			<filter label="Título" field="titulo" />
+		</filters>
+
+	</module>
+	
+</AG2Manager>

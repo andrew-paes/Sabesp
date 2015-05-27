@@ -1,0 +1,12 @@
+﻿.jcarousel-clip-horizontal { width:469px; }
+.boxLinksDireita div { zoom:1; width:330px; }
+
+#abas .abaContent { float:left; width:408px; display:none; }
+#abas .abaContent .bgrTopRight,
+#abas .abaContent .bgrBottomRight,
+#abas .abaContent .bgrBottomLeft { width:410px; }
+#abas .abaContent .bgrBottomLeft { padding:15px; font-size:1.2em; width:380px; }
+
+.lstMenu li a {display:block;text-indent:-9999px;overflow:hidden;height:69px;background:url(../img/img-menu.jpg) no-repeat;}
+
+.boxWhite {position:relative;}

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="Default.aspx" title="Início" >
+		<!-- A SABESP -->
+		<siteMapNode url="interna/Default.aspx?secaoId=3" title="A Sabesp">
+			<siteMapNode url="interna/Default.aspx?secaoId=4" title="Números" />
+			<siteMapNode url="interna/Default.aspx?secaoId=7" title="Estrutura e Dirigentes" />
+			<siteMapNode url="interna/Default.aspx?secaoId=8" title="Tecnologia" />
+			<siteMapNode url="interna/Default.aspx?secaoId=17" title="Pesquisa" />
+			<siteMapNode url="interna/Default.aspx?secaoId=18" title="Sua Região">
+				<siteMapNode url="interna/Municipio.aspx?secaoId=19" title="Página do Município" />
+			</siteMapNode>
+			<siteMapNode url="interna/Default.aspx?secaoId=20" title="Prêmios" />
+			<siteMapNode url="interna/Default.aspx?secaoId=21" title="Apoio e Patrocínio" />
+			<siteMapNode url="interna/Default.aspx?secaoId=22" title="Trabalhe na Sabesp">
+				<siteMapNode url="interna/Default.aspx?secaoId=23" title="Segurança no Trabalho" />
+				<siteMapNode url="interna/Default.aspx?secaoId=24" title="Universidade Empresarial" />
+				<siteMapNode url="interna/Default.aspx?secaoId=25" title="Concurso Público" />
+				<siteMapNode url="interna/Default.aspx?secaoId=26" title="Programa Aprendiz" />
+				<siteMapNode url="interna/Default.aspx?secaoId=27" title="Programa de Estágio" />
+			</siteMapNode>
+			<siteMapNode url="interna/Default.aspx?secaoId=28" title="Prestação de Contas" />
+		</siteMapNode>
+		<!-- SANEAMENTO -->
+		<siteMapNode url="saneamento/Default.aspx?secaoId=29" title="Saneamento">
+			<siteMapNode url="agua/Default.aspx?secaoId=30" title="Água" />
+			<siteMapNode url="esgoto/Default.aspx?secaoId=48" title="Esgoto" />
+		</siteMapNode>
+		<!-- SOCIAL E AMBIENTAL -->
+		<siteMapNode url="sociedade-meioambiente/Default.aspx?secaoId=62" title="Sociedade e Meio Ambiente">
+			<siteMapNode url="interna/Default.aspx?secaoId=73" title="Programas" />
+			<siteMapNode url="interna/Default.aspx?secaoId=92" title="Compromisso com o Meio Ambiente" />
+			<siteMapNode url="interna/Default.aspx?secaoId=95" title="Educação" />
+			<siteMapNode url="interna/Default.aspx?secaoId=124" title="Transparência" />
+		</siteMapNode>
+		<!-- PRODUTOS E SERVIÇOS -->
+		<siteMapNode url="interna/Default.aspx?secaoId=63" title="Produtos e Serviços">
+			<siteMapNode url="interna/Default.aspx?secaoId=128" title="Empresas" />
+			<siteMapNode url="interna/Default.aspx?secaoId=129" title="Micro-empresas" />
+			<siteMapNode url="interna/Default.aspx?secaoId=130" title="Municípios e Estados" />
+			<siteMapNode url="interna/Default.aspx?secaoId=131" title="Consultoria Empresarial" />
+			<siteMapNode url="interna/Default.aspx?secaoId=132" title="Consultoria Sustentável" />
+			<siteMapNode url="interna/Default.aspx?secaoId=133" title="Condomínios" />
+		</siteMapNode>
+		<!-- AGÊNCIA VIRTUAL -->
+		<siteMapNode url="http://www2.sabesp.com.br/agvirtual2/asp/default.asp" title="Agência Virtual" />
+		<!-- FIQUE POR DENTRO -->
+		<siteMapNode url="fique-por-dentro/Default.aspx?secaoId=65" title="Fique por Dentro">
+			<siteMapNode url="fique-por-dentro/noticias-Default.aspx?secaoId=66" title="Notícias">
+				<siteMapNode url="fique-por-dentro/noticias-Detalhes.aspx" title="Detalhes" />
+			</siteMapNode>
+			<siteMapNode url="fique-por-dentro/comunicados-Default.aspx?secaoId=67" title="Comunicados">
+				<siteMapNode url="fique-por-dentro/comunicados-Detalhes.aspx" title="Detalhes" />
+			</siteMapNode>
+			<siteMapNode url="fique-por-dentro/tv-sabesp-Default.aspx?secaoId=68" title="TV Sabesp">
+				<siteMapNode url="fique-por-dentro/tv-sabesp-Detalhes.aspx" title="Detalhes" />
+			</siteMapNode>
+			<siteMapNode url="fique-por-dentro/podcasts-Default.aspx?secaoId=69" title="Podcast">
+				<siteMapNode url="fique-por-dentro/podcast-Detalhes.aspx" title="Detalhes" />
+			</siteMapNode>
+			<siteMapNode url="fique-por-dentro/eventos-Default.aspx?secaoId=70" title="Eventos">
+				<siteMapNode url="fique-por-dentro/eventos-Detalhes.aspx" title="Detalhes" />
+			</siteMapNode>
+		</siteMapNode>
+		<!-- FALE CONOSCO -->
+		<siteMapNode url="" title="Central de Atendimento" >
+			<siteMapNode url="fale-conosco/Default.aspx?secaoId=71" title="Fale Conosco" />
+			<siteMapNode url="fale-conosco/faq.aspx" title="FAQ" >
+				<siteMapNode url="fale-conosco/interna-tema.aspx?secaoId=134" title="Perguntas Freqüentes" />
+				<siteMapNode url="fale-conosco/interna-tema.aspx?secaoId=135" title="Ouvidoria" />
+			</siteMapNode>
+		</siteMapNode>
+
+		<!-- RESULTADO NEGATIVO DE BUSCA -->
+		<siteMapNode url="busca/Default.aspx" title="Resultado de Busca" />
+    
+    <!-- RSS -->
+    <siteMapNode url="rss/Default.aspx" title="RSS" />
+  </siteMapNode>
+</siteMap>

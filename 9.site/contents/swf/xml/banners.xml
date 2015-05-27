@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<banners>
+  <banner>
+    <link><![CDATA[http://site.sabesp.com.br/site/interna/Default.aspx?secaoId=91]]></link>
+    <file>contents/swf/swf/destaqueCINESABESP.swf</file>
+    <time>10</time>
+  </banner>
+  <banner>
+    <link>
+      <![CDATA[http://site.sabesp.com.br/site/interna/Default.aspx?secaoId=274]]></link>
+    <file>contents/swf/swf/desatqueDebitoAutomatico.swf</file>
+    <time>10</time>
+  </banner>
+</banners>

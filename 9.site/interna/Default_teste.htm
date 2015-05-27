@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Sabesp » Início » Pagina Teste </title>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+	<link type="text/css" rel="Stylesheet" href="../contents/css/jquery.jcarousel.css" />
+	<link type="text/css" rel="Stylesheet" href="../contents/css/jquery.autocomplete.css" />
+	<link id="ctl00_cssDefault" type="text/css" rel="Stylesheet" href="../contents/css/default.css" />
+	<link id="ctl00_Link1" type="text/css" rel="Stylesheet" href="../contents/css/prettyPhoto.css" />
+
+	<script type="text/javascript" src="../contents/js/jquery.js"></script>
+
+	<script type="text/javascript" src="../contents/js/swfobject.js"></script>
+
+	<script type="text/javascript" src="/site/contents/js/thickbox.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/site/contents/css/thickbox.css" />
+	<style type="text/css">
+		/* BARRA TOPO */.barraPortalTexto
+		{
+			font-family: verdana;
+			color: #000000;
+			font-size: 11px;
+			text-decoration: none;
+		}
+		.barraPortalLinkTopo
+		{
+			font-family: verdana;
+			color: #000000;
+			font-size: 11px;
+			text-decoration: none;
+		}
+		.barraPortalLinkTopo:hover
+		{
+			font-family: verdana;
+			color: #000000;
+			font-size: 11px;
+			text-decoration: underline;
+		}
+		.barraPortalBoxTopo
+		{
+			font-family: Verdana;
+			font-color: #CAD1E3;
+			border-color: #CAD1E3;
+			background-color: #DADADA;
+			font-size: 10px;
+			border-width: 0.01cm;
+		}
+	</style>
+	<!--[if lt IE 7]>
+	<link type="text/css" rel="Stylesheet" href="../contents/css/default_ie6.css" />
+	<script type="text/javascript">
+		try {
+			document.execCommand("BackgroundImageCache", false, true);
+		} catch(err) {}
+	</script>
+	<![endif]-->
+	<!--[if lt IE 8]>
+	<link type="text/css" rel="Stylesheet" href="../contents/css/default_ie.css" />
+	<![endif]-->
+</head>
+<body id="ctl00_body" class="interna">
+	<div style="background: url(../contents/img/barra_topo/pixel.jpg) top left repeat-x;">
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" id="barraTopo" style="display: none;">
+			<tr valign="top">
+				<td>
+					<table cellpadding="0" height="47" background="../contents/img/barra_topo/pixel.jpg"
+						cellspacing="0" border="0">
+						<tr>
+							<td width="20">
+								&nbsp;
+							</td>
+							<td>
+								<a href="http://www.saopaulo.sp.gov.br/" target="_blank">
+									<img src="../contents/img/barra_topo/portal_do_governo.gif" onmouseover="troca_img_topo(this)"
+										hspace="10" alt="" border="0"></a><a href="http://www.cidadao.sp.gov.br/" target="_blank"><img
+											src="../contents/img/barra_topo/cidadao_sp.gif" onmouseover="troca_img_topo(this)"
+											hspace="10" alt="" border="0"></a><a href="http://www.investimentos.sp.gov.br/" target="_blank"><img
+												src="../contents/img/barra_topo/investimentos_sp.gif" onmouseover="troca_img_topo(this)"
+												hspace="10" alt="" border="0"></a><br>
+							</td>
+							<td>
+								<div align="justify" style="">
+									<form name="destaques">
+									<select name="menu" onchange="gotoPage()" style="width: 150px" class="barraPortalBoxTopo">
+										<option value="null">Destaques</option>
+										<option value="http://www.saopaulo.sp.gov.br/sis/noticias.asp">SP Notícias</option>
+										<option value="http://www.poupatempo.sp.gov.br/">Poupatempo</option>
+										<option value="http://www.acessasaopaulo.sp.gov.br/">Acessa São Paulo</option>
+										<option value="http://www.e-negociospublicos.com.br/">Licitações</option>
+										<option value="null">---------------------------------</option>
+										<option value="null">Secretarias:</option>
+										<option value="http://www.sap.sp.gov.br/">- Administração Penitenciária</option>
+										<option value="http://www.agricultura.sp.gov.br/">- Agricultura e Abastecimento</option>
+										<option value="http://www.desenvolvimentosocial.sp.gov.br/">- Assistência e Desenvolvimento
+											Social</option>
+										<option value="http://www.casacivil.sp.gov.br/">- Casa Civil</option>
+										<option value="http://www.casamilitar.sp.gov.br/">- Casa Militar</option>
+										<option value="http://www.saopaulo.sp.gov.br/linha/sec_comunic.htm">- Comunicação</option>
+										<option value="http://www.cultura.sp.gov.br/">- Cultura</option>
+										<option value="http://www.desenvolvimento.sp.gov.br/">- Desenvolvimento</option>
+										<option value="http://www.planejamento.sp.gov.br/">- Economia e Planejamento</option>
+										<option value="http://www.educacao.sp.gov.br/">- Educação</option>
+										<option value="http://www.emprego.sp.gov.br/">- Emprego e Relações do Trabalho</option>
+										<option value="http://www.saopaulo.sp.gov.br/linha/sec_ensinosup.htm">- Ensino Superior</option>
+										<option value="http://www.sejel.sp.gov.br/">- Esporte e Lazer</option>
+										<option value="http://www.fazenda.sp.gov.br/">- Fazenda</option>
+										<option value="http://www.saopaulo.sp.gov.br/linha/sec_gestao.htm">- Gestão Pública</option>
+										<option value="http://www.habitacao.sp.gov.br/">- Habitação</option>
+										<option value="http://www.justica.sp.gov.br/">- Justiça e Defesa da Cidadania</option>
+										<option value="http://www.ambiente.sp.gov.br/">- Meio Ambiente</option>
+										<option value="http://www.pge.sp.gov.br/">- Procuradoria Geral do Estado</option>
+										<option value="http://www.saopaulo.sp.gov.br/linha/sec_rel_inst.htm">- Relações Institucionais</option>
+										<option value="http://www.energia.sp.gov.br/">- Saneamento e Energia</option>
+										<option value="http://www.saude.sp.gov.br/">- Saúde</option>
+										<option value="http://www.ssp.sp.gov.br/">- Segurança Pública</option>
+										<option value="http://www.transportes.sp.gov.br/">- Transportes</option>
+										<option value="http://www.stm.sp.gov.br/">- Transportes Metropolitanos</option>
+									</select>
+									<div style="display: none;">
+										<a href="http://www.saopaulo.sp.gov.br" target="_blank" title="Portal do Governo.">Portal
+											do Governo. A página abrirá em outra janela.</a> <a href="http://www.saopaulo.sp.gov.br/sis/noticias.asp"
+												target="_blank" title="São Paulo Notícias.">São Paulo Notícias. A página abrirá
+												em outra janela.</a> <a href="http://www.cidadao.sp.gov.br/" target="_blank" title="Portal do Cidadão.">
+													Portal do Cidadão. A página abrirá em outra janela.</a> <a href="http://www.poupatempo.sp.gov.br/"
+														target="_blank" title="Poupatempo.">Poupatempo. A página abrirá em outra janela.</a>
+										<a href="http://www.acessasaopaulo.sp.gov.br/" target="_blank" title="Acessa São Paulo.">
+											Acessa São Paulo. A página abrirá em outra janela.</a> <a href="http://www.e-negociospublicos.com.br/"
+												target="_blank" title="Licitações.">Licitações. A página abrirá em outra janela.</a>
+										<a href="http://www.investimentos.sp.gov.br/" target="_blank" title="Investimentos em São Paulo.">
+											Investimentos em São Paulo. A página abrirá em outra janela.</a>
+									</div>
+									</form>
+								</div>
+							</td>
+							<td>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td align="right">
+					<a href="http://www.saopaulo.sp.gov.br/" target="_blank" title="Portal do Governo do Estado de São Paulo">
+						<img src="../contents/img/barra_topo/topo_governo.gif" alt="Portal do Governo do Estado de São Paulo"
+							border="0"></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<form name="aspnetForm" method="post" action="Default.aspx?secaoId=179" id="aspnetForm">
+	<div>
+		<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1MDgwMTg5OTcPZBYCZg9kFgICAw9kFgJmD2QWBgIDD2QWEAIDDw8WAh4EVGV4dAUPRW5nbGlzaCB2ZXJzaW9uZGQCBQ8PFgIeC05hdmlnYXRlVXJsBTVodHRwOi8vd3d3Mi5zYWJlc3AuY29tLmJyL2FndmlydHVhbDIvYXNwL3NlcnZfcmdpLmFzcGRkAgcPDxYEHwAFDEZvcm5lY2Vkb3Jlcx8BBSJ+L2ludGVybmEvRGVmYXVsdC5hc3B4P3NlY2FvSWQ9MzM4ZGQCCQ8PFgIfAAUMSW52ZXN0aWRvcmVzZGQCCw8PFgQfAAUMRmFsZSBDb25vc2NvHwEFJn4vZmFsZS1jb25vc2NvL0RlZmF1bHQuYXNweD9zZWNhb0lkPTcxZGQCDQ9kFgJmD2QWBAIBDxYCHwAFBUJ1c2NhZAIDDw8WAh4HVG9vbFRpcAUfRGlnaXRlIG8gcXVlIHZvY8OqIHByb2N1cmEgYXF1aWRkAg8PDxYCHgdWaXNpYmxlaGQWAgIDDw8WAh8ABQtTYWliYSBtYWlzLmRkAhEPDxYEHghDc3NDbGFzcwUSbWVudUFnZW5jaWFWaXJ0dWFsHgRfIVNCAgJkFgICAQ9kFg4CAQ8PFgIfAQUgfi9pbnRlcm5hL0RlZmF1bHQuYXNweD9zZWNhb0lkPTNkZAIDDw8WAh8BBSR+L3NhbmVhbWVudG8vRGVmYXVsdC5hc3B4P3NlY2FvSWQ9MjlkZAIFDw8WAh8BBTB+L3NvY2llZGFkZS1tZWlvYW1iaWVudGUvRGVmYXVsdC5hc3B4P3NlY2FvSWQ9NjJkZAIHDw8WAh8BBSF+L2ludGVybmEvRGVmYXVsdC5hc3B4P3NlY2FvSWQ9NjNkZAIJDw8WAh8BBSp+L2ZpcXVlLXBvci1kZW50cm8vRGVmYXVsdC5hc3B4P3NlY2FvSWQ9NjVkZAILDw8WAh8BBSN+L2ltcHJlbnNhL0RlZmF1bHQuYXNweD9zZWNhb0lkPTE5MmRkAg0PDxYCHwEFIn4vaW50ZXJuYS9EZWZhdWx0LmFzcHg/c2VjYW9JZD0xNzlkZAIHD2QWDAIBDxYCHwAFFENsaWVudGVzIGUgc2VydmnDp29zZAIDDxYCHwBkZAIFDw8WAh4ISW1hZ2VVcmwFNi9zaXRlL3VwbG9hZHMvc2VjYW8vMTUwNDIwMTAyMzIzX3NlcnZp77+9b3NfY2FuYWlzLmpwZ2RkAgcPFgIfAAXMKzxwPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3Bhbj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+UGFyYSBzb2xpY2l0YXIgc2VydmnDp29zLCBvcyBjbGllbnRlcyBwb3NzdWVtIG9zIHNlZ3VpbnRlcyBjYW5haXMgZGUgYXRlbmRpbWVudG8gw6AgZGlzcG9zacOnw6NvOjwvc3Bhbj48L3NwYW4+PC9zcGFuPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHgtc21hbGwiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogVGFob21hIj48YnIgLz4NCjwvc3Bhbj48L3NwYW4+PC9wPg0KPHAgYWxpZ249Imp1c3RpZnkiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3Bhbj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+PHN0cm9uZyBjbGFzcz0iZmNrSW5saW5lIj48aW1nIGhlaWdodD0iMTAiIGFsdD0iYnVsbGV0IiB3aWR0aD0iMTAiIHNyYz0iaHR0cDovL3NpdGUuc2FiZXNwLmNvbS5ici9Vc2VyRmlsZXMvSW1hZ2Uvc2V0YV92ZXJkZV9idWxsZXQucG5nIiAvPsKgPGEgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Imh0dHA6Ly93d3cyLnNhYmVzcC5jb20uYnIvYWd2aXJ0dWFsMi9hc3AvZGVmYXVsdC5hc3AiPjx1PkFnw6puY2lhIFZpcnR1YWw8L3U+PC9hPjogPC9zdHJvbmc+U3VhIGFnw6puY2lhIGRlIGF0ZW5kaW1lbnRvIG5hIEludGVybmV0LiBTb2xpY2l0ZSBzZWd1bmRhIHZpYSBkZSBjb250YSwgY29uc2VydG8gZGUgdmF6YW1lbnRvcywgY29uc3VsdGUgbyBoaXN0w7NyaWNvIGRlIGNvbnN1bW8gZSBzYWliYSBvbmRlIGVmZXR1YXIgb3MgcGFnYW1lbnRvcy4gPC9zcGFuPjwvc3Bhbj48L3NwYW4+PC9wPg0KPHAgYWxpZ249Imp1c3RpZnkiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+PGltZyBoZWlnaHQ9IjEwIiBhbHQ9ImJ1bGxldCIgd2lkdGg9IjEwIiBzcmM9Imh0dHA6Ly9zaXRlLnNhYmVzcC5jb20uYnIvVXNlckZpbGVzL0ltYWdlL3NldGFfdmVyZGVfYnVsbGV0LnBuZyIgLz7CoDxhIG9uY2xpY2s9IndpbmRvdy5vcGVuKHRoaXMuaHJlZiwnJywncmVzaXphYmxlPW5vLGxvY2F0aW9uPW5vLG1lbnViYXI9bm8sc2Nyb2xsYmFycz1ubyxzdGF0dXM9bm8sdG9vbGJhcj1ubyxmdWxsc2NyZWVuPW5vLGRlcGVuZGVudD1ubyxzdGF0dXMnKTsgcmV0dXJuIGZhbHNlIiBocmVmPSJodHRwczovL2F0ZW5kaW1lbnRvb25saW5lLnNhYmVzcC5jb20uYnIvc2NjdXN1YXJpb3dlYi9kZWZhdWx0LmFzcHgiPjx1PjxzdHJvbmcgY2xhc3M9ImZja0lubGluZSI+QXRlbmRpbWVudG8gb24gbGluZTo8L3N0cm9uZz48L3U+PC9hPsKgQ29uc3VsdGUgbm9zc29zIGF0ZW5kZW50ZXMgZSB0aXJlIHN1YXMgZMO6dmlkYXMgc29icmUgb3Mgc2VydmnDp29zLiBGdW5jaW9uYSBkZSBzZWd1bmRhIGEgc2V4dGEtZmVpcmFzLCBkYXMgOCDDoHMgMjEgaG9yYXMgZSBubyBzw6FiYWRvLCBkYXMgOCDDoHMgMjEgaG9yYXMuPC9zcGFuPjwvc3Bhbj48L3A+DQo8cCBhbGlnbj0ianVzdGlmeSI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogc21hbGwiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogVGFob21hIj48aW1nIGhlaWdodD0iMTAiIGFsdD0iYnVsbGV0IiB3aWR0aD0iMTAiIHNyYz0iaHR0cDovL3NpdGUuc2FiZXNwLmNvbS5ici9Vc2VyRmlsZXMvSW1hZ2Uvc2V0YV92ZXJkZV9idWxsZXQucG5nIiAvPsKgPHU+PHN0cm9uZyBjbGFzcz0iZmNrSW5saW5lIj48YSB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iaHR0cDovL3d3dzIuc2FiZXNwLmNvbS5ici9hZ3ZpcnR1YWwyL2FzcC9saXN0YV9tdW5pYy5hc3AiPjx1PkFnw6puY2lhcyBkZSBhdGVuZGltZW50bzwvdT48L2E+Ojwvc3Ryb25nPjwvdT4gRW5jb250cmUgYSBhZ8OqbmNpYSBkZSBhdGVuZGltZW50byBtYWlzIHByw7N4aW1hIGRlIHN1YSByZXNpZMOqbmNpYS48L3NwYW4+PC9zcGFuPjwvcD4NCjxwIGFsaWduPSJqdXN0aWZ5Ij48c3BhbiBzdHlsZT0iZm9udC1zaXplOiBzbWFsbCI+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OiBUYWhvbWEiPjxzdHJvbmcgY2xhc3M9ImZja0lubGluZSI+PGltZyBoZWlnaHQ9IjEwIiBhbHQ9ImJ1bGxldCIgd2lkdGg9IjEwIiBzcmM9Imh0dHA6Ly9zaXRlLnNhYmVzcC5jb20uYnIvVXNlckZpbGVzL0ltYWdlL3NldGFfdmVyZGVfYnVsbGV0LnBuZyIgLz7CoENlbnRyYWwgZGUgYXRlbmRpbWVudG8gdGVsZWbDtG5pY288L3N0cm9uZz48L3NwYW4+PC9zcGFuPjwvcD4NCjxwIGFsaWduPSJqdXN0aWZ5Ij48c3Ryb25nIGNsYXNzPSJmY2tJbmxpbmUiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+MTk1IDwvc3Bhbj48L3NwYW4+PC9zdHJvbmc+PGJyIC8+DQo8c3BhbiBzdHlsZT0iZm9udC1zaXplOiBzbWFsbCI+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OiBUYWhvbWEiPihsaWdhw6fDo28gZ3JhdHVpdGEpIC0gUGFyYSBlbWVyZ8OqbmNpYXMsIGNvbW8gZmFsdGEgZCfDoWd1YSwgdmF6YW1lbnRvcyBlIGVzZ290byBlbnR1cGlkby4gPC9zcGFuPjwvc3Bhbj48c3BhbiBzdHlsZT0iZm9udC1zaXplOiBzbWFsbCI+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OiBUYWhvbWEiPkZ1bmNpb25hIDI0IGhvcmFzIHRvZG9zIG9zIGRpYXMuPGJyIC8+DQrCoDxiciAvPg0KPHN0cm9uZyBjbGFzcz0iZmNrSW5saW5lIj48YnIgLz4NClNlcnZpw6dvcyBjb21lcmNpYWlzPC9zdHJvbmc+PC9zcGFuPjwvc3Bhbj48YnIgLz4NCjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+KGxpZ2HDp8OjbyBncmF0dWl0YSkgLSBQYXJhIGluZm9ybWHDp8O1ZXMgc29icmUgY29udGFzLCBzb2xpY2l0YcOnw6NvIGRlIHNlZ3VuZGEgdmlhIChlbSBjYXNvIGRlIHBlcmRhIG91IG7Do28gcmVjZWJpbWVudG8pLCBwZWRpZG9zIGRlIHNlcnZpw6dvcywgZW5kZXJlw6dvcywgdGVsZWZvbmVzIMO6dGVpcyBlIGZvbGhldG9zIGV4cGxpY2F0aXZvczwvc3Bhbj48L3NwYW4+PC9wPg0KPHAgYWxpZ249Imp1c3RpZnkiPjxzdHJvbmcgY2xhc3M9ImZja0lubGluZSI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogc21hbGwiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogVGFob21hIj5SZWdpw6NvIE1ldHJvcG9saXRhbmEgZGUgU8OjbyBQYXVsbzogPC9zcGFuPjwvc3Bhbj48L3N0cm9uZz48c3BhbiBzdHlsZT0iZm9udC1zaXplOiBzbWFsbCI+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OiBUYWhvbWEiPjA4MDAtMDExOTkxMSA8L3NwYW4+PC9zcGFuPjwvcD4NCjxwIGFsaWduPSJqdXN0aWZ5Ij48c3Ryb25nIGNsYXNzPSJmY2tJbmxpbmUiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+SG9yw6FyaW8gZGUgZnVuY2lvbmFtZW50bzo8L3NwYW4+PC9zcGFuPjwvc3Ryb25nPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+PGJyIC8+DQpTZWd1bmRhIMOgIHNleHRhLWZlaXJhIGRhcyA3IMOgcyAyMSBob3Jhczwvc3Bhbj48L3NwYW4+PC9wPg0KPHAgYWxpZ249Imp1c3RpZnkiPjxzdHJvbmcgY2xhc3M9ImZja0lubGluZSI+PHNwYW4+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OiBUYWhvbWEiPkludGVyaW9yIGUgTGl0b3JhbDogPC9zcGFuPjwvc3Bhbj48L3N0cm9uZz48c3Bhbj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+MDgwMC0wNTUwMTk1PC9zcGFuPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogVGFob21hIj4gPC9zcGFuPjwvc3Bhbj48L3A+DQo8cCBhbGlnbj0ianVzdGlmeSI+PHN0cm9uZyBjbGFzcz0iZmNrSW5saW5lIj48c3BhbiBzdHlsZT0iZm9udC1zaXplOiBzbWFsbCI+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OiBUYWhvbWEiPkhvcsOhcmlvIGRlIGZ1bmNpb25hbWVudG86PGJyIC8+DQo8L3NwYW4+PC9zcGFuPjwvc3Ryb25nPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+U2VndW5kYSDDoCBzZXh0YS1mZWlyYSBkYXMgNyDDoHMgMjEgaG9yYXM8YnIgLz4NClPDoWJhZG8gZGFzIDggw6BzIDE3IGhvcmFzPGJyIC8+DQpEb21pbmdvIGRhcyAxMCDDoHMgMTYgaG9yYXM8L3NwYW4+PC9zcGFuPjwvcD4NCjxwIGFsaWduPSJqdXN0aWZ5Ij48c3BhbiBzdHlsZT0iZm9udC1zaXplOiBzbWFsbCI+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OiBUYWhvbWEiPjxzdHJvbmcgY2xhc3M9ImZja0lubGluZSI+PGltZyBoZWlnaHQ9IjEwIiBhbHQ9ImJ1bGxldCIgd2lkdGg9IjEwIiBzcmM9Imh0dHA6Ly9zaXRlLnNhYmVzcC5jb20uYnIvVXNlckZpbGVzL0ltYWdlL3NldGFfdmVyZGVfYnVsbGV0LnBuZyIgLz7CoDwvc3Ryb25nPjwvc3Bhbj48L3NwYW4+PHU+PHN0cm9uZyBjbGFzcz0iZmNrSW5saW5lIj48YSBocmVmPSJodHRwOi8vd3d3Mi5zYWJlc3AuY29tLmJyL2FndmlydHVhbDIvYXNwL291dmlkb3JpYS5hc3AiPjx1PjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+T3V2aWRvcmlhOiA8L3NwYW4+PC9zcGFuPjwvdT48L2E+PC9zdHJvbmc+PGEgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Imh0dHA6Ly93d3cyLnNhYmVzcC5jb20uYnIvYWd2aXJ0dWFsMi9hc3Avb3V2aWRvcmlhLmFzcCI+PHU+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogc21hbGwiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogVGFob21hIj4wODAwLTA1NTA1NjU8L3NwYW4+PC9zcGFuPjwvdT48L2E+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogc21hbGwiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogVGFob21hIj4gPC9zcGFuPjwvc3Bhbj48YnIgLz4NCjwvdT48YnIgLz4NCjxzcGFuIHN0eWxlPSJmb250LXNpemU6IHNtYWxsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6IFRhaG9tYSI+RGUgc2VndW5kYSDDoCBzZXh0YS1mZWlyYSwgZGFzIDggw6BzIDE4IGhvcmFzPC9zcGFuPjwvc3Bhbj48YnIgLz4NCjxiciAvPg0KPHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogc21hbGwiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogVGFob21hIj5Db20gbyBuw7ptZXJvIGRvIHByb3RvY29sbyBlbSBtw6Nvcywgb3MgdXN1w6FyaW9zIHBvZGVtIHJlZ2lzdHJhciBwcm9ibGVtYXMgcXVhbnRvIGFvIGF0ZW5kaW1lbnRvIGRlIHNlcnZpw6dvcyBqw6Egc29saWNpdGFkb3MuIEFsw6ltIGRpc3NvLCDDqSBwb3Nzw612ZWwgZW52aWFyIGNyw610aWNhcywgZGVuw7puY2lhcyBvdSBlbG9naW9zLiA8L3NwYW4+PC9zcGFuPjwvcD4NCjxwIGFsaWduPSJqdXN0aWZ5Ij48c3BhbiBzdHlsZT0iZm9udC1zaXplOiBzbWFsbCI+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OiBUYWhvbWEiPjxhIHRhcmdldD0iX2JsYW5rIiBocmVmPSJodHRwOi8vd3d3Mi5zYWJlc3AuY29tLmJyL2FndmlydHVhbDIvYXNwL291dmlkb3JpYV9mb3JtLmFzcCI+PHU+QWNlc3NlIG8gZm9ybXVsw6FyaW88L3U+PC9hPjwvc3Bhbj48L3NwYW4+PC9wPmQCCw9kFgQCAQ8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYCAgEPFgIeBWNsYXNzBQJvbhYCAgEPFgIfAAXAATxzdHJvbmc+PGEgb25jbGljaz0iamF2YXNjcmlwdDogQWJhQ2xpY2tHQSgnL0NsaWVudGVzX2Vfc2Vydmljb3MvRmFsZV9Db25vc2NvJyk7IiBocmVmPSIjY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9ib3hBYmFzMV9ycHRBYmFzX2N0bDAwX3BubEFiYSI+RmFsZSBDb25vc2NvPC9hPjxzcGFuPjwhLS0gLS0+PC9zcGFuPjwvc3Ryb25nPmQCAw8WAh8HAgEWAmYPZBYCAgEPDxYEHwQFFmJveFdoaXRlIGFiYUNvbnRlbnQgb24fBQICZBYCAgEPD2QWAh4Fc3R5bGUFHm1pbi1oZWlnaHQ6MzZweDsgX2hlaWdodDozNnB4OxYCAgEPFgIfAAXvDDxwPk5lc3RlIGNhbmFsIHZvY8OqIHBvZGUgZW52aWFyIGNyw610aWNhcyBvdSBzdWdlc3TDtWVzIHNvYnJlIGEgQWfDqm5jaWEgIFZpcnR1YWwgZGEgU2FiZXNwLiBBbnRlcyBkZSBwcmVlbmNoZXIgbyBmb3JtdWzDoXJpbywgdmVyaWZpcXVlIHNlIHN1YSAgZMO6dmlkYSBvdSBxdWVzdGlvbmFtZW50byBuw6NvIHBvZGUgc2VyIHJlc3BvbmRpZG8gcGVsbyA8YSBocmVmPSIuLi9mYWxlLWNvbm9zY28vZmFxLmFzcHg/c2VjYW9JZD0xMzQiPjxzdHJvbmcgY2xhc3M9ImZja0lubGluZSI+UGVyZ3VudGFzICBNYWlzIEZyZXF1ZW50ZXMuIDwvc3Ryb25nPjwvYT4gPGJyIC8+DQo8YnIgLz4NCk8gY29udGF0byBjb20gYSBFbXByZXNhIHRhbWLDqW0gcG9kZSBzZXIgZmVpdG8gYXRyYXbDqXMgZG9zIHNlZ3VpbnRlcyAgY29udGF0b3M6IDxiciAvPg0KPGJyIC8+DQo8c3BhbiBjbGFzcz0idHh0X2NvcnBvX3ByaW5jIj4NCjxwPjxiPlNlcnZpw6dvcyBkZSBlbWVyZ8OqbmNpYTwvYj48L3A+DQo8cD48Yj4xOTU8L2I+PC9wPg0KPHA+KGxpZ2HDp8OjbyBncmF0dWl0YSkgLSBQYXJhIGVtZXJnw6puY2lhcywgY29tbyBmYWx0YSBkJ8OhZ3VhLCB2YXphbWVudG9zIGUgIGVzZ290byBlbnR1cGlkby4gRnVuY2lvbmEgMjQgaG9yYXMgdG9kb3Mgb3MgZGlhcy48L3A+DQo8YnIgLz4NCjxwPjxiPlNlcnZpw6dvcyBjb21lcmNpYWlzPC9iPjwvcD4NCjxwPihsaWdhw6fDo28gZ3JhdHVpdGEpIC0gUGFyYSBpbmZvcm1hw6fDtWVzIHNvYnJlIGNvbnRhcywgc29saWNpdGHDp8OjbyBkZSAgc2VndW5kYSB2aWEgKGVtIGNhc28gZGUgcGVyZGEgb3UgbsOjbyByZWNlYmltZW50byksIHBlZGlkb3MgZGUgc2VydmnDp29zLCAgZW5kZXJlw6dvcywgdGVsZWZvbmVzIMO6dGVpcyBlIGZvbGhldG9zIGV4cGxpY2F0aXZvcy48L3A+DQo8cD48Yj4wODAwLTAxMTk5MTEgKFJlZ2nDo28gTWV0cm9wb2xpdGFuYSBkZSBTw6NvIFBhdWxvKTwvYj48L3A+DQo8cD48Yj5Ib3LDoXJpbyBkZSBmdW5jaW9uYW1lbnRvOjwvYj48L3A+DQo8cD5zZWd1bmRhIMOgIHNleHRhLWZlaXJhOiBkYXMgNyDDoHMgMjEgaG9yYXM8L3A+DQo8cD48Yj4wODAwLTA1NTAxOTUgKEludGVyaW9yIGUgTGl0b3JhbCk8L2I+PC9wPg0KPHA+PGI+SG9yw6FyaW8gZGUgZnVuY2lvbmFtZW50bzo8L2I+PC9wPg0KPHA+c2VndW5kYSDDoCBzZXh0YS1mZWlyYTogZGFzIDcgw6BzIDIxIGhvcmFzPGJyIC8+DQpzw6FiYWRvOiBkYXMgOCDDoHMgMTcgaG9yYXM8YnIgLz4NCmRvbWluZ28gIDogZGFzIDEwIMOgcyAxNiBob3JhczwvcD4NCjxiciAvPg0KPHA+PGI+T3V2aWRvcmlhPC9iPiAtIDxhIGhyZWY9Imh0dHA6Ly93d3cyLnNhYmVzcC5jb20uYnIvYWd2aXJ0dWFsMi9hc3Avb3V2aWRvcmlhLmFzcCIgdGFyZ2V0PSJfYmxhbmsiPkxpbms8L2E+PC9wPg0KPHA+PGI+MDgwMC0wNTUwNTY1PC9iPiAtIENvbSBvIG7Dum1lcm8gZG8gcHJvdG9jb2xvIGVtIG3Do29zLCBvcyB1c3XDoXJpb3MgcG9kZW0gcmVnaXN0cmFyIHByb2JsZW1hcyBxdWFudG8gYW8gYXRlbmRpbWVudG8gZGUgc2VydmnDp29zICBqw6Egc29saWNpdGFkb3MuICBBbMOpbSBkaXNzbywgw6kgcG9zc8OtdmVsIGVudmlhciBjcsOtdGljYXMsIGRlbsO6bmNpYXMgb3UgZWxvZ2lvcy48L3A+DQo8L3NwYW4+PC9wPmQCDQ8PFgIfA2hkZAIJD2QWDgIpD2QWAmYPDxYEHwQFEWJveEZpcXVlUG9yRGVudHJvHwUCAmQWBAIBDxYCHwAFEEZpcXVlIHBvciBEZW50cm9kAgMPZBYCAgMPFgIfCAUEbGFzdGQCKw9kFgJmDw8WBB8EBRNib3hQcm9kdXRvc1NlcnZpY29zHwUCAmQWBAIBDxYCHwAFCFByb2R1dG9zZAIDD2QWAgIFDxYCHwgFBGxhc3RkAi0PZBYCZg8PFgQfBAUTYm94U2FuZWFtZW50b0Jhc2ljbx8FAgJkFgQCAQ8WAh8ABQpTYW5lYW1lbnRvZAIDD2QWAgIBDxYCHwgFBGxhc3RkAi8PDxYCHwNoZBYCZg8PFgQfBAURYm94QWdlbmNpYVZpcnR1YWwfBQICZBYCAgEPFgIfAAUQQWfDqm5jaWEgVmlydHVhbGQCMQ9kFgJmDw8WBB8EBRNib3hTdXN0ZW50YWJpbGlkYWRlHwUCAmQWBAIBDxYCHwAFGVNvY2llZGFkZSBlIE1laW8gQW1iaWVudGVkAgMPZBYCAgQPFgIfCAUEbGFzdGQCMw9kFgJmDw8WBB8EBQpib3hBU2FiZXNwHwUCAmQWBAIBDxYCHwAFCEEgU2FiZXNwZAIDD2QWAgIHDxYCHwgFBGxhc3RkAj0PDxYCHwEFI34vZmFsZS1jb25vc2NvL2ZhcS5hc3B4P3NlY2FvSWQ9MTM0ZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFHmN0bDAwJHRvcG8kYnVzY2FUb3BvMSRidG5CdXNjYQU/Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRzZWd1bmRhQ29sdW5hRGluYW1pY2ExJGN0bDAxJGltZ0J0bklyy/NfIK2fcIUfkAcwW76goeAsIoc=" />
+	</div>
+	<div>
+		<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+		<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+		<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQLZm+bGDgKK2IzJDQL+hsq3CgK/yrzVDwLF9oDeCTuzcszQnD45N5iQUzKCwD0CXR3p" />
+	</div>
+	<div class="fontSize0" id="boxWrapper">
+		<div class="boxTopo">
+			<div class="boxConteudoTopo">
+				<a id="ctl00_topo_hlHome" class="lnkLogotipo" href="../Default.aspx"><strong>Sabesp</strong>
+					<em>A vida tratada com respeito</em> </a>
+				<div class="boxAuxiliar">
+					<ul class="lstFuncionalidades">
+						<li class="itmIdioma"></li>
+						<li class="itmContraste"><a href="#contraste" id="lnkContraste">Contraste</a></li>
+						<li class="itmAumentaFonte"><a href="#aumenta" title="Aumenta fonte" id="lnkAumentaFonte">
+							Aumenta fonte</a></li>
+						<li class="itmDiminuiFonte"><a href="#diminui" title="Diminui fonte" id="lnkDiminuiFonte">
+							Diminui fonte</a></li>
+					</ul>
+					<ul class="lstBotoes">
+						<li class="itmAgenciaVirtual"><a id="ctl00_topo_hlAgenciaVirtual" href="http://www2.sabesp.com.br/agvirtual2/asp/serv_rgi.asp"
+							target="_blank">Agência Virtual</a></li>
+						<li class="itmFornecedores"><a id="ctl00_topo_hlFornecedores" href="Default.aspx?secaoId=338">
+							Fornecedores</a></li>
+						<li class="itmInvestidores"><a id="ctl00_topo_hlInvestidores" href="http://www.sabesp.com.br/Calandraweb/CalandraRedirect/?temp=0&amp;proj=investidoresnovo&amp;pub=T&amp;db="
+							target="_blank">Investidores</a></li>
+						<li class="itmFaleConosco"><a id="ctl00_topo_hlFaleConosco" href="../fale-conosco/Default.aspx?secaoId=71">
+							Fale Conosco</a></li>
+					</ul>
+					<div id="ctl00_topo_buscaTopo1_pnlBusca" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_topo_buscaTopo1_btnBusca')">
+						<fieldset id="fsBusca">
+							<legend>Busca</legend>
+							<input name="ctl00$topo$buscaTopo1$txtBusca" type="text" value="Digite o que você procura aqui"
+								id="ctl00_topo_buscaTopo1_txtBusca" title="Digite o que você procura aqui" class="text limpaCampo" />
+							<input type="image" name="ctl00$topo$buscaTopo1$btnBusca" id="ctl00_topo_buscaTopo1_btnBusca"
+								class="button" src="../contents/img/btn-buscar.gif" style="border-width: 0px;" />
+						</fieldset>
+					</div>
+				</div>
+			</div>
+			<!-- AVISO -->
+			<!-- // AVISO -->
+			<div id="ctl00_topo_pnlMenu" class="menuAgenciaVirtual">
+				<!-- MENU -->
+				<ul class="lstMenu" id="lstMenu">
+					<li class="itmSabesp"><a id="ctl00_topo_menu1_hlMenuSabesp" rel="l0" href="Default.aspx?secaoId=3">
+						A Sabesp</a> </li>
+					<li class="itmSaneamento"><a id="ctl00_topo_menu1_hlMenuSaneamento" rel="l-102px"
+						href="../saneamento/Default.aspx?secaoId=29">Saneamento</a> </li>
+					<li class="itmSociedade"><a id="ctl00_topo_menu1_hlMenuSociedade" rel="l-263px" href="../sociedade-meioambiente/Default.aspx?secaoId=62">
+						Sociedade e meio ambiente</a> </li>
+					<li class="itmProdutos"><a id="ctl00_topo_menu1_hlMenuProdutos" rel="l-414px" href="Default.aspx?secaoId=63">
+						Produtos e serviços</a> </li>
+					<li class="itmFiquePorDentro"><a id="ctl00_topo_menu1_hlMenuFiquePorDentro" rel="l-573px"
+						href="../fique-por-dentro/Default.aspx?secaoId=65">Fique por dentro</a> </li>
+					<li class="itmAtendimento"><a id="ctl00_topo_menu1_hlMenuAtendimento" rel="l-724px"
+						href="../imprensa/Default.aspx?secaoId=192">Central de atendimento</a> </li>
+					<li class="itmAgenciaVirtual"><a id="ctl00_topo_menu1_hlMenuAgenciaVirtual" rel="l-875px"
+						href="Default.aspx?secaoId=179">Clientes e Serviços</a> </li>
+				</ul>
+				<!-- // MENU -->
+				<!-- SUBMENU -->
+				<div id="ctl00_topo_subMenu1_pnlSubMenu" class="boxSubmenu">
+					<ul>
+						<li><a href="Default.aspx?secaoId=181">Guia de serviços</a></li><li><a href="Default.aspx?secaoId=183">
+							Tarifas</a></li><li><a href="Default.aspx?secaoId=184">Dicas e testes</a></li><li
+								class="itmLast"><a href="../sociedade-meioambiente/glossario.aspx?secaoId=122">Glossário</a></li></ul>
+				</div>
+				<!-- // SUBMENU -->
+			</div>
+		</div>
+		<div class="boxContent">
+			<div id="ctl00_BreadCrumb1_pnlCaminhoPao" class="boxCaminhoPao">
+				<span id="caminho_pao" class="caminho_pao"><span><a class="root_node" href="../Default.aspx">
+					Início</a></span><span class="separator"> / </span><span class="current_node">Pagina Teste</span></span>
+			</div>
+			<div class="colLeft">
+				<div class="colContent fullWidth interna">
+					<h2>
+						Default Teste
+					</h2>
+					<div class="colContentLeft">
+						<h3 class="boxTitulo">
+						</h3>
+						<div class="boxWhite">
+							<div class="bgrTopRight">
+								<div class="bgrBottomRight">
+									<div class="bgrBottomLeft">
+										<div class="boxImagem" align="center">
+											<img id="ctl00_ContentPlaceHolder1_imgSecao" src="/Sabesp/branches/manut_versao_2.00/site/uploads/secao/150420102323_servi%ef%bf%bdos_canais.jpg"
+												style="border-width: 0px;" />
+										</div>
+										<div id="boxMasterContent" class="boxContent">
+											<p>
+												Texto ono ononoo no no no ono non ononono nono nono non onononono nonon on ononon
+												onononoon ono ono ononoo no no no ono non ononono nono nono non onononono nonon
+												on ononon onononoon ono ono ononoo no no no ono non ononono nono nono non onononono
+												nonon on ononon onononoon ono ono ononoo no no no ono non ononono nono nono non
+												onononono nonon on ononon onononoon ono ono ononoo no no no ono non ononono nono
+												nono non onononono nonon on ononon onononoon ono ono ononoo no no no ono non ononono
+												nono nono non onononono nonon on ononon onononoon ono ono ononoo no no no ono non
+												ononono nono nono non onononono nonon on ononon onononoon ono
+											</p>
+											<p align="justify">
+												<span style="font-size: small"><span style="font-family: Tahoma"><u><a href="#">Link de Teste</a></u></span></span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="colContentRight">
+					</div>
+				</div>
+			</div>
+			<div class="colRight">
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				try {
+					var pageTracker = _gat._getTracker('UA-17790992-1');
+					pageTracker._setDomainName('none');
+					pageTracker._setAllowLinker(true);
+					pageTracker._trackPageview('/Pagina_Teste');
+				} catch (err) { }
+
+				$("div[id$='boxMasterContent']").find("a").click(function() {
+					try {
+						var tituloLinkContent = $(this).text().trim();
+						if (tituloLinkContent != null && tituloLinkContent != '') {
+							tituloLinkContent = replaceSpecialChars(tituloLinkContent);
+							tituloLinkContent = tituloLinkContent.substr(0, 60);
+							alert(tituloLinkContent);
+							var pageTracker = _gat._getTracker('UA-17790992-1');
+							pageTracker._setCustomVar(1, 'LINK', tituloLinkContent, 3);
+							pageTracker._setDomainName('none');
+							pageTracker._setAllowLinker(true);
+							pageTracker._trackPageview('/Pagina_Teste');
+						}
+					} catch (err) { }
+				});
+			});
+		</script>
+	</form>
+	<!-- SCRIPTS -->
+
+	<script type="text/javascript" src="../contents/js/jquery.tabs.js"></script>
+
+	<script type="text/javascript" src="../contents/js/jquery.backgroundPosition.js"></script>
+
+	<script type="text/javascript" src="../contents/js/jquery.autocomplete.js"></script>
+
+	<script type="text/javascript" src="../contents/js/jquery.prettyPhoto.js"></script>
+
+	<script type="text/javascript" src="../contents/js/prettyPhotto.call.js"></script>
+
+	<script type="text/javascript" src="../contents/js/default.js"></script>
+
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+
+	<!-- // SCRIPTS -->
+</body>
+</html>

@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GoogleAnalytics.ascx.cs" Inherits="controls_GoogleAnalytics" %>

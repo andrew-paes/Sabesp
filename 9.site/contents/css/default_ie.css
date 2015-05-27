@@ -1,0 +1,33 @@
+﻿legend{margin-left:-7px;}
+
+.clr {zoom:1;}
+
+.boxRodape .boxExploreSite { zoom:1; }
+
+.lstMenu li a {display:block;text-indent:-9999px;overflow:hidden;height:69px;background:url(../img/img-menu.png) no-repeat;}
+
+.boxTwitter .boxContent {overflow-x:hidden;}
+.boxTwitter .bgrBottomRight a.lnkMore { bottom:25px; }
+
+.boxGray .form table { width:100%; }
+.boxGray .form table td.tdLeft { background-position: left 1px; }
+.boxGray .form table td.tdLeft input { padding-top:3px; }
+.boxGray .form table td.tdRight { width:40px; padding-top:1px; }
+.boxGray .boxBorder {padding-bottom:3px;}
+.boxGray .boxDestaque {padding:3px;}
+.boxGray .txtChamada {padding-top:3px; padding-bottom:3px;}
+.boxGray .fones span,
+.boxGray .fones strong {display:block;}
+.boxGray .borderPieFix {padding:6px 0 0;}
+.colRight .boxGray .borderPieFix {padding:6px 6px 0;}
+
+.boxWhiteMed .bgrTopRight {width:399px;}
+
+.imprensa .newsList li {width:100%;}
+.imprensa .bgrBottomLeft .content {zoom:1;}
+
+.boxBlue .bgrTopRight {width:100%;}
+
+.jcarousel-container { float:left; }
+
+.newsListContent .newsList { padding-bottom:15px; }

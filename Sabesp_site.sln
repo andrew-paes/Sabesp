@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "site", "site\", "{09E2BAF8-DB40-4765-9385-19EB12873686}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}|Sabesp.Data.dll;{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}|Sabesp.ADO.dll;{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}|Sabesp.DAL.dll;{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}|Sabesp.FilterHelper.dll;{C4FC704E-2AFA-459B-8B08-44EF8E23F744}|Sabesp.BO.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/site"
+		Debug.AspNetCompiler.PhysicalPath = "site\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\site\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/site"
+		Release.AspNetCompiler.PhysicalPath = "site\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\site\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4919"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.ADO", "2.Sabesp.ADO\Sabesp.ADO.csproj", "{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.BO", "3.Sabesp.BO\Sabesp.BO.csproj", "{C4FC704E-2AFA-459B-8B08-44EF8E23F744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.Data", "4.Sabesp.Data\Sabesp.Data.csproj", "{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.DAL", "5.Sabesp.DAL\Sabesp.DAL.csproj", "{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sabesp.FilterHelper", "6.Sabesp.FilterHelper\Sabesp.FilterHelper.csproj", "{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "8.manager", "8.manager\", "{03F5E7AC-08C2-49A0-B379-81FADE1D8A47}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/8.manager"
+		Debug.AspNetCompiler.PhysicalPath = "8.manager\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\8.manager\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/8.manager"
+		Release.AspNetCompiler.PhysicalPath = "8.manager\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\8.manager\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2171"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09E2BAF8-DB40-4765-9385-19EB12873686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E2BAF8-DB40-4765-9385-19EB12873686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E2BAF8-DB40-4765-9385-19EB12873686}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E2BAF8-DB40-4765-9385-19EB12873686}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E9F40C1-4E69-45DA-A1A5-759C9EC219D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FC704E-2AFA-459B-8B08-44EF8E23F744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4FC704E-2AFA-459B-8B08-44EF8E23F744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4FC704E-2AFA-459B-8B08-44EF8E23F744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4FC704E-2AFA-459B-8B08-44EF8E23F744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F57CED9-E42A-472B-B329-1F0E0ED8FA84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41A28A6-3BA5-43DA-88BC-A7C1F4A0BCD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1194DE72-68F2-4AE2-AE4A-1DA028C42FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03F5E7AC-08C2-49A0-B379-81FADE1D8A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F5E7AC-08C2-49A0-B379-81FADE1D8A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F5E7AC-08C2-49A0-B379-81FADE1D8A47}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F5E7AC-08C2-49A0-B379-81FADE1D8A47}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
